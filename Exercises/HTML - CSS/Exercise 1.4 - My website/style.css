@@ -1,0 +1,12 @@
+button {
+    cursor: pointer;
+    background-color: rgb(145, 145, 212);
+    border-radius: 5px;
+    border: black solid 2px;
+    width: auto;
+    height: 30px;
+    margin: 5px;
+}
+button:hover {
+    background-color: orangered;
+}
