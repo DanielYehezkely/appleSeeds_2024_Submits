@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Exercise 2.1 - Forms/style.css" />
+    <title>Exercise 2.1 - Forms</title>
+  </head>
+  <body>
+    <div class="formContainer">
+      <h1>Create an Account</h1>
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" style="width: 150px;" />
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password"style="width: 150px;" />
+
+        <label for="age">Age: </label>
+        <select name="age" id="age" style="width: 100px;">
+          <option value="select">Select Age</option>
+          <option value="select">21-30</option>
+          <option value="select">30-40</option>
+          <option value="select">40-50</option>
+        </select>
+
+        <label for="about"
+          >Tell us about yourself:<input
+            type="text"
+            name="about"
+            id="about"
+            style="width: 280px; height: 100px"
+        /></label>
+
+        <label for="checkbox"
+          ><input type="checkbox" name="terms" id="terms" /> I agree to the
+          <a href="terms and service">terms and service</a></label>
+
+          <button type="submit" style="width: 80px;">Sign up</button>
+      </form>
+    </div>
+  </body>
+</html>

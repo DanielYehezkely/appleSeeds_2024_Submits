@@ -1,0 +1,9 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 350px;
+    background-color: rgba(201, 201, 201, 0.174);
+}
+
