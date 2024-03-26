@@ -1,0 +1,26 @@
+.divOne {
+  border: 1px solid red;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+}
+
+.divTwo {
+  font-weight: bold;
+  font-style: italic;
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+}
+
+.divThree {
+  font-family: monospace;
+  color: white;
+  background-color: black;
+  box-shadow: 6px 5px 6px rgb(0, 0, 0);
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+}
