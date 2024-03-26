@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  blockquote {
+    border: 2px solid #000000;
+    padding: 20px;
+    font-size: 20px;
+    max-width: 600px;
+    text-align: center;
+    
+  }
+
+  cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+  }
