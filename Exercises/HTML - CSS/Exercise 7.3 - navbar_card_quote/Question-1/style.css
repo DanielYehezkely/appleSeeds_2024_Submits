@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family:Georgia, 'Times New Roman', Times, serif ;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 article {
   width: 100vw;
@@ -21,22 +21,22 @@ article {
   align-items: center;
   justify-content: space-around;
   box-shadow: 1px 1px 15px 5px black;
-  padding:  0 60px 0 60px ;
+  padding: 0 60px 0 60px;
 }
 
 .greeting-card header {
-    width: 100%;
+  width: 100%;
   font-size: 200%;
   font-weight: bold;
   text-align: center;
 }
 .greeting-card p {
-    width: 100%;
- text-align: center;
+  width: 100%;
+  text-align: center;
   font-size: 100%;
 }
 .greeting-card i {
-    width: 100%;
+  width: 100%;
   font-size: 250%;
   text-align: center;
 }
