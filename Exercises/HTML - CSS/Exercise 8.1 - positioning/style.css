@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/*Exercise ----------------------------------------------------------------------------------------------------*/
+
+
+
+#outer {
+  width: 10rem;
+  height: 10rem;
+  background: darkcyan;
+  margin: 5rem;
+  position: relative; /*Answer 2 - added line*/  
+}
+
+/* ---- Answers -----
+1.When i made the inner element's position absolute, it looked for its relative parent in the webpage. To make sure it looks for it within the outer element i added position relative to the outer element, This way the outer element becomes the relative parent for the inner one.
+*/
+
+#inner {
+  width: 5rem;
+  height: 5rem;
+  background: lightgreen;
+  position: absolute;
+  top: 1rem;
+}
