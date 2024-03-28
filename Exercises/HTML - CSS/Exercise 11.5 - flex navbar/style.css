@@ -37,32 +37,26 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 4rem;
 }
 
 .logo {
-  height: 50%;
-  width: 10%;
   font-weight: bold;
   font-size: 2.4rem;
+  flex: 3;
 }
 
 .logo:hover {
   cursor: pointer;
 }
 
-.nav-linksContainer {
-  width: 30%;
-  height: 50%;
-  font-size: 1.7rem;
-}
-
 .nav-links {
-  width: 100%;
-  height: 100%;
+  font-size: 1.7rem;
+  gap: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex: 1;
 }
 
 /*-----------------------------Media Querries -----------------------------*/
@@ -75,25 +69,27 @@ a:hover {
     justify-content: center;
   }
   .navBar {
-    height: 80vh;
+    height: 60vh;
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
   .logo {
-    height: 20%;
-    width: 100%;
-    text-align: center;
-  }
-  .nav-linksContainer {
-    width: 100%;
-  }
-  .nav-links {
-    width: 100%;
     display: flex;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex: 3;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
+    gap: 1rem;
   }
 }
