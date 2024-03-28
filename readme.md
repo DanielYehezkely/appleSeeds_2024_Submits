@@ -9,5 +9,5 @@
 - [Projects]()
 
 
-![appleseeds](/Images/FrontEnd.jpg)
+![appleseeds](FrontEnd.jpg)
 
