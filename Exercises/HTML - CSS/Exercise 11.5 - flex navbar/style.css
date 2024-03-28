@@ -29,6 +29,7 @@ a:hover {
   color: orangered;
 }
 
+/*--------------------------Exercise---------------------------*/
 .navBar {
   height: 7vh;
   background-color: #eae8e8;
@@ -63,6 +64,8 @@ a:hover {
   align-items: center;
   justify-content: space-around;
 }
+
+/*-----------------------------Media Querries -----------------------------*/
 
 @media only screen and (max-width: 1000px) {
   nav {
