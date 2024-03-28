@@ -1,0 +1,25 @@
+.hero-container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  
+}
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.aboveAll-bar {
+    width: 100%;
+    height: 5.2rem;
+    background-image: linear-gradient(20deg, black 0%, #26345A 5%, black 65%, black 100%);
+    z-index: 2;
+}
+
+
+
