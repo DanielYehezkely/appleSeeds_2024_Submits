@@ -1,10 +1,10 @@
 /*---------------------Global--------------------*/
-.hero-container {
+.global-container {
   position: relative;
   height: 100vh;
   width: 100vw;
   color: var(--Primary-Color);
-  overflow: auto;
+  /* overflow: auto; */
 }
 .bg-video {
   position: absolute;
@@ -124,7 +124,7 @@
   font-weight: var(--Primary-font-bolding);
 }
 .main-header p {
-  font-size: var(--Primary-font-size);
+  font-size: var(--Secondary-font-size);
   font-weight: var(--Primary-font-bolding);
 }
 /*----------------- Main - Footer----------------------*/
