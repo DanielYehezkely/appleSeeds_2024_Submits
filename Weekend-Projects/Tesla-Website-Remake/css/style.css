@@ -4,26 +4,30 @@
   height: 100vh;
   width: 100vw;
   color: var(--Primary-Color);
+  overflow: auto;
 }
 .bg-video {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: var(--full-width);
+  height: var(--Full-height);
+  width: var(--Full-width);
   object-fit: cover;
   z-index: -1;
 }
-
 /*--------------Header----------------------*/
+.header-container {
+  height: 17%;
+  width: var(--Full-width);
+}
 /* ----------------- Dark bar ------------------*/
 .aboveAll-bar {
-  width: var(--full-width);
+  width: var(--Full-width);
   height: 5.2rem;
   z-index: 2;
-  display: flex;
+  box-shadow:0.1rem 5rem 9rem 0.1rem rgb(0, 0, 0) ;
 }
-.left-bar {
+.left-part {
   background-image: linear-gradient(
     10deg,
     black 0%,
@@ -31,10 +35,10 @@
     #26345a 65%,
     #26345a 100%
   );
-  height: 100%;
+  height: var(--Full-height);
   flex: 1;
 }
-.middle-bar {
+.middle-part {
   flex: 2;
   background-image: linear-gradient(
     170deg,
@@ -43,101 +47,109 @@
     black 70%,
     black 100%
   );
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 3rem;
 }
-.middle-bar span {
+.middle-part span {
   font-size: 1.7rem;
-  font-weight: 500;
+  font-weight: var(--Primary-font-bolding);
 }
-.middle-bar p {
-  font-size: 1.4rem;
+.middle-part p {
+  font-size: var(--Primary-font-size);
 }
-.middle-bar a {
+.middle-part a {
   color: var(--Primary-Color);
-  font-size: 1.4rem;
+  font-size: var(--Primary-font-size);
   border-bottom: 0.1rem solid white;
 }
-.right-bar {
-  background-color: black;
+.right-part {
+  background-color: var(--Secondary-color);
   flex: 1;
 }
-
 /*-------------------------- Nav-bar ---------------------*/
 .nav-bar {
   height: 5.6rem;
-  width: var(--full-width);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: var(--Full-width);
 }
-
 .logo {
   width: 12rem;
   height: 2.4rem;
   fill: var(--Primary-Color);
-
   flex: 1;
   text-align: center;
 }
-
 .nav-menu {
   flex: 9;
 }
-
-.nav-links {
-  height: 100%;
-  width: var(--full-width);
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  font-weight: 500;
+.nav-menu-links  {
+  height: var(--Full-height);
+  width: var(--Full-width);
+  font-size: var(--Nav-links-font-size);
+  font-weight: var(--Primary-font-bolding);
 }
-
-.nav-links li {
+.nav-menu-links  li {
   width: 9rem;
   height: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center; 
+  line-height: 3.5rem; 
   border-radius: 0.5rem;
 }
-
-.nav-links li:hover {
+.nav-menu-links  li:hover {
   background-color: #8d8a8a6f;
   cursor: pointer;
   color: rgb(20, 20, 20);
-  font-weight: 600;
+  font-weight: var(--Nav-links-font-weight);
 }
-
 .nav-icons {
-  height: 100%;
+  height: var(--Full-height);
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
-  font-size: 2.5rem;
-  color: white;
+  color: var(--Icons-color);
+}
+/*---------------------------main ------------------------*/
+.main-container {
+  width: var(--Full-width);
+  height: 83%;
+}
+/*-------------------------Main - Header-----------------------*/
+.main-header{
+  width: var(--Full-width);
+  height: 50%;
+  line-height: 4rem ;
+}
+.main-header span {
+  font-size: 2.3rem;
+}
+.main-header h1 {
+  font-size: 4rem;
+  font-weight: var(--Primary-font-bolding);
+}
+.main-header p {
+  font-size: var(--Primary-font-size);
+  font-weight: var(--Primary-font-bolding);
+}
+/*----------------- Main - Footer----------------------*/
+.main-footer{
+  width: var(--Full-width);
+  height: 50%;
+}
+.footer-container {
+  height: 28%;
+  width: 24%;
+}
+.car-stats {
+  height: 50%;
+  width: 75%;
+  gap: 6.2rem;
+}
+.demo-order-btns {
+  height:50%;
+  width: 90%;
+  gap: 2.2rem;
+  font-size: var(--Primary-font-size);
+  font-weight: var(--Nav-links-font-weight);
 }
 
-.nav-icons svg {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-.nav-icons svg:hover {
-  background-color: #484848a7;
-  border-radius: 0.5rem;
-  animation: slow 1s 1;
-}
 
-@keyframes slow {
-  from {
-    background-color: transparent;
-  }
-  to {
-    background-color: #484848a7;
-  }
-}
+
+
+

@@ -1,7 +1,116 @@
+
+/*---------------- Flexing -----------------------------*/
 .flex {
-    display: flex;
+  display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-center-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.flex-center-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.icon {
-    
+/*------------------------------ CAR STATS - CARD ----------------------*/
+.stats-card {
+  width: var(--Card-Width);
+  height: var(--card-Height);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.stats-card h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.stats-card h1 span {
+  font-size: 2rem;
+}
+
+.stats-card p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* ------------------------------ BUTTONS --------------------------------*/
+.btn {
+  height: var(--Button-Height);
+  width: var(--Button-Width);
+  border: var(--Button-Border-Color) solid 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--Button-Border-Radius);
+  cursor: pointer;
+}
+
+.btn-light {
+  color: var(--Secondary-color);
+  background-color: var(--Primary-Color);
+}
+
+.demoDrive:hover {
+  animation: btn-light-hover var(--Button-Hover-Animation-Duration) forwards ease-out;
+}
+@keyframes btn-light-hover {
+  from {
+    color: var(--Primary-Color);
+    background-color: transparent;
+  }
+  to {
+    color: var(--Secondary-color);
+    background-color: var(--Primary-Color);
+  }
+}
+
+.customOrder:hover {
+  animation: btn-dark-hover 1s forwards ease-out;
+}
+@keyframes btn-dark-hover {
+  from {
+    border-color: var(--Primary-Color);
+    background-color: var(--Primary-Color);
+  }
+  to {
+    background-color: rgb(193, 190, 190);
+    border-color: rgb(193, 190, 190);
+  }
+}
+
+/*---------------- SVG ---------------------------*/
+.svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.svg:hover {
+  background-color: #484848a7;
+  border-radius: 0.5rem;
+  animation: svg-hovering 1s 1;
+}
+
+@keyframes svg-hovering {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: #484848a7;
+  }
 }

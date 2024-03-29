@@ -1,5 +1,28 @@
 :root{
     --Primary-Color: white;
-    --primary-font: "Gotham SSm A";
-    --full-width: 100%;
+    --Secondary-color:black;
+
+    --Primary-font: "Gotham SSm A";
+    --Primary-font-color:white;
+    --Primary-font-bolding: 500;
+    --Primary-font-size: 1.4rem;
+    
+    --Icons-color:white;
+
+    --Nav-links-font-size: 1.4rem;
+    --Nav-links-font-weight: 600;
+    --Nav-links-color: white;
+
+    --Full-width: 100%;
+    --Full-height: 100%;
+
+    --Card-Width: 25%; 
+    --Card-Height: 100%; 
+
+    --Button-Height: 53%;
+    --Button-Width: 42%;
+    --Button-font-size: 1.4rem ;
+    --Button-Border-Color: white;
+    --Button-Border-Radius: 0.4rem;
+    --Button-Hover-Animation-Duration: 1s;
 }
