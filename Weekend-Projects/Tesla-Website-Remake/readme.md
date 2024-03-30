@@ -1,6 +1,6 @@
 # Tesla Web Remake Project
 
-This project is a remake of the Tesla 3 🚘 website using <a href="README.md"><img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="HTML Icon" width="50"></a>  and ![alt text](image.png){ width=45 height=40 }.
+This project is a remake of the Tesla 3 🚘 website using <a href="README.md"><img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="HTML Icon" width="32"></a>  and ![alt text](./images/css-3.png).
 
 ## Description
 
