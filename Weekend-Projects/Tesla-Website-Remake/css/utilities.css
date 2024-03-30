@@ -102,6 +102,7 @@
 .svg {
   width: 2.4rem;
   height: 2.4rem;
+  fill: white;
 }
 .svg:hover {
   background-color: #484848a7;

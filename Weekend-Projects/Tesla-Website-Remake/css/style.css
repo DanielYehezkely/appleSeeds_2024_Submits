@@ -16,16 +16,18 @@
   z-index: -1;
 }
 /*--------------Header----------------------*/
+
 .header-container {
-  height: 17%;
+  height: 6%;
   width: var(--Full-width);
 }
 /* ----------------- Dark bar ------------------*/
 .aboveAll-bar {
   width: var(--Full-width);
   height: 5.2rem;
-  z-index: 2;
-  box-shadow: 0.1rem 5rem 9rem 0.1rem rgb(0, 0, 0);
+  z-index: 100;
+  position: fixed;
+  top: 0;
 }
 .left-part {
   background-image: linear-gradient(
@@ -108,13 +110,14 @@
 /*---------------------------main ------------------------*/
 .main-container {
   width: var(--Full-width);
-  height: 83%;
+  height: 94%;
 }
 /*-------------------------Main - Header-----------------------*/
 .main-header {
   width: var(--Full-width);
   height: 50%;
   line-height: 4rem;
+  padding-top: 10.7rem;
 }
 .main-header span {
   font-size: 2.3rem;
@@ -157,4 +160,32 @@
   width: 100vw;
   height: 100vh;
   box-shadow: 0.1rem -8rem 130rem 0.1rem rgb(0, 0, 0);
+  color: var(--Primary-Color);
+}
+.box-info {
+  width: 28%;
+  height: 17%;
+  text-align: center;
+  gap: 1.5rem;
+}
+.box-info h1 {
+  font-size: 2.8rem;
+}
+.box-info p {
+  font-size: var(--Primary-font-size);
+}
+
+/*------------------sticky chat box--------------*/
+.sticky-chat-box {
+  height: 4rem;
+  width: 4.8rem;
+  background-color: #3C3F44;
+  border-radius: 0.4rem;
+  position: sticky;
+  top: 122rem;
+  left: 245rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }

@@ -25,5 +25,6 @@
     --Button-font-size: 1.4rem ;
     --Button-Border-Color: white;
     --Button-Border-Radius: 0.4rem;
-    --Button-Hover-Animation-Duration: 1s;
+    --Button-Hover-Animation-Duration: 0.5s;
 }
+
