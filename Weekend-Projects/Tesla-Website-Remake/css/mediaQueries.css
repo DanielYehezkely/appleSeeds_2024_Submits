@@ -10,7 +10,6 @@
   .main-header {
     padding: 5rem 0 0 2.5rem;
   }
-
   .footer-container {
     height: 60%;
     width: 37%;
@@ -20,12 +19,10 @@
   .btn {
     height: 67%;
   }
-
   .box-info {
     width: 45%;
     height: 26%;
   }
-
   .sticky-chat-box {
     top: 67rem;
     left: 145rem;
@@ -56,12 +53,6 @@
   .header-container {
     padding-top: 10rem;
   }
-  .nav-bar {
-   
-  }
-  .logo {
-  
-  }
   .nav-menu-links {
   display: none;
   }
@@ -77,13 +68,11 @@
   .main-header {
     padding-top: 12rem;
   }
-
   .footer-container {
     height: 60%;
     width: 100%;
     gap: 0.2;
   }
-
   .demo-order-btns {
     flex-direction: column;
     height: 30%;
@@ -92,13 +81,10 @@
     font-size: var(--Primary-font-size);
     font-weight: var(--Nav-links-font-weight);
   }
-
   .btn {
    height: 100%;
    width: 80%;
   }
-  
-
   .sticky-chat-box {
     top: 67rem;
     left: 43rem;
