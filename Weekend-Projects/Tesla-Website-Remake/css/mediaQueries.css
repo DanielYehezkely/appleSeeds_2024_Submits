@@ -54,16 +54,16 @@
     padding-top: 10rem;
   }
   .nav-menu-links {
-  display: none;
+    display: none;
   }
   .nav-menu-links li {
-   display: none;
+    display: none;
   }
   .nav-menu-links li:hover {
-  display: none;
+    display: none;
   }
   .nav-icons {
-  display: none;
+    display: none;
   }
   .main-header {
     padding-top: 12rem;
@@ -82,8 +82,8 @@
     font-weight: var(--Nav-links-font-weight);
   }
   .btn {
-   height: 100%;
-   width: 80%;
+    height: 100%;
+    width: 80%;
   }
   .sticky-chat-box {
     top: 67rem;

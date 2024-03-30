@@ -75,7 +75,7 @@
   width: 12rem;
   height: 2.4rem;
   fill: var(--Primary-Color);
-  
+
   text-align: var(--Centering-text);
 }
 .nav-menu-links {
@@ -172,13 +172,13 @@
 .sticky-chat-box {
   height: 4rem;
   width: 4.8rem;
-  background-color: #3C3F44;
+  background-color: #3c3f44;
   border-radius: 0.4rem;
   position: sticky;
   top: 122rem;
   left: 245rem;
   fill: white;
-  animation: pulsing-chat-box 3s infinite ease alternate ;
+  animation: pulsing-chat-box 3s infinite ease alternate;
 }
 @keyframes pulsing-chat-box {
   0% {
@@ -200,4 +200,3 @@
     background-color: var(--Chat-box-color);
   }
 }
-
