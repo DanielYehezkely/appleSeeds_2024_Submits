@@ -1,5 +1,5 @@
 /*---------------------Global--------------------*/
-.global-container {
+.first-page {
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -25,7 +25,7 @@
   width: var(--Full-width);
   height: 5.2rem;
   z-index: 2;
-  box-shadow:0.1rem 5rem 9rem 0.1rem rgb(0, 0, 0) ;
+  box-shadow: 0.1rem 5rem 9rem 0.1rem rgb(0, 0, 0);
 }
 .left-part {
   background-image: linear-gradient(
@@ -80,20 +80,20 @@
 .nav-menu {
   flex: 9;
 }
-.nav-menu-links  {
+.nav-menu-links {
   height: var(--Full-height);
   width: var(--Full-width);
   font-size: var(--Nav-links-font-size);
   font-weight: var(--Primary-font-bolding);
 }
-.nav-menu-links  li {
+.nav-menu-links li {
   width: 9rem;
   height: 3.5rem;
-  text-align: center; 
-  line-height: 3.5rem; 
+  text-align: center;
+  line-height: 3.5rem;
   border-radius: 0.5rem;
 }
-.nav-menu-links  li:hover {
+.nav-menu-links li:hover {
   background-color: #8d8a8a6f;
   cursor: pointer;
   color: rgb(20, 20, 20);
@@ -111,10 +111,10 @@
   height: 83%;
 }
 /*-------------------------Main - Header-----------------------*/
-.main-header{
+.main-header {
   width: var(--Full-width);
   height: 50%;
-  line-height: 4rem ;
+  line-height: 4rem;
 }
 .main-header span {
   font-size: 2.3rem;
@@ -128,28 +128,33 @@
   font-weight: var(--Primary-font-bolding);
 }
 /*----------------- Main - Footer----------------------*/
-.main-footer{
+.main-footer {
   width: var(--Full-width);
   height: 50%;
 }
 .footer-container {
-  height: 28%;
+  height: 40%;
   width: 24%;
+  gap: 1rem;
 }
 .car-stats {
-  height: 50%;
+  height: 40%;
   width: 75%;
   gap: 6.2rem;
 }
 .demo-order-btns {
-  height:50%;
+  height: 35%;
   width: 90%;
   gap: 2.2rem;
   font-size: var(--Primary-font-size);
   font-weight: var(--Nav-links-font-weight);
 }
-
-
-
-
-
+/*-----------------------Bottom -section -------------------------------------*/
+.second-page {
+  background-image: url(../images/Model-3-Exterior-Desktop-NA.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: 0.1rem -8rem 130rem 0.1rem rgb(0, 0, 0);
+}
