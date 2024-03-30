@@ -69,7 +69,7 @@
 .nav-bar {
   height: 5.6rem;
   width: var(--Full-width);
-  gap: 89rem;
+  padding: 0 4.3rem;
 }
 .logo {
   width: 12rem;
