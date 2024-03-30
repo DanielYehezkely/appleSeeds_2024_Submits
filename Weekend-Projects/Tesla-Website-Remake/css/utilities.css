@@ -1,12 +1,10 @@
-
 /*---------------- Flexing -----------------------------*/
 .flex {
   display: flex;
 }
-.flex-column{
-    flex-direction: column;
+.flex-column {
+  flex-direction: column;
 }
-
 .flex-center-center {
   display: flex;
   align-items: center;
@@ -27,32 +25,24 @@
   align-items: center;
   justify-content: flex-end;
 }
-
 /*------------------------------ CAR STATS - CARD ----------------------*/
 .stats-card {
   width: var(--Card-Width);
   height: var(--card-Height);
-  display: flex;
-  flex-direction: column;
   align-items: center;
-
+  text-align: var(--Centering-text);
 }
-
 .stats-card h1 {
   font-size: 2.4rem;
   font-weight: 600;
-  
 }
-
 .stats-card h1 span {
   font-size: 2rem;
 }
-
 .stats-card p {
   font-size: 1.2rem;
-  text-align: center;
+  text-align: var(--Centering-text);
 }
-
 /* ------------------------------ BUTTONS --------------------------------*/
 .btn {
   height: var(--Button-Height);
@@ -62,59 +52,79 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--Button-Border-Radius);
-  cursor: pointer;
+  cursor: var(--Pointer-cursor);
 }
-
 .btn-light {
   color: var(--Secondary-color);
   background-color: var(--Primary-Color);
 }
-
 .demoDrive:hover {
-  animation: btn-light-hover var(--Button-Hover-Animation-Duration) forwards ease-out;
+  animation: btn-light-hover var(--Button-Hover-Animation-Duration) forwards
+    ease-out;
 }
 @keyframes btn-light-hover {
   from {
-    color: var(--Primary-Color);
+    color: var(--Button-light-hover-Color);
     background-color: transparent;
   }
   to {
-    color: var(--Secondary-color);
+    color: var(--Button-dark-hover-Color);
     background-color: var(--Primary-Color);
   }
 }
-
 .customOrder:hover {
-  animation: btn-dark-hover 1s forwards ease-out;
+  animation: btn-dark-hover var(--Button-Hover-Animation-Duration) forwards
+    ease-out;
 }
 @keyframes btn-dark-hover {
   from {
-    border-color: var(--Primary-Color);
-    background-color: var(--Primary-Color);
+    border-color: var(--Button-Border-Color);
+    background-color: var(--Button-light-hover-Color);
   }
   to {
     background-color: rgb(193, 190, 190);
     border-color: rgb(193, 190, 190);
   }
 }
-
 /*---------------- SVG ---------------------------*/
 .svg {
   width: 2.4rem;
   height: 2.4rem;
-  fill: white;
+  fill: var(--Svg-primary-color);
 }
 .svg:hover {
-  background-color: #484848a7;
+  background-color: var(--Nav-svg-hover-color);
   border-radius: 0.5rem;
   animation: svg-hovering 1s 1;
 }
-
 @keyframes svg-hovering {
   from {
     background-color: transparent;
   }
   to {
-    background-color: #484848a7;
+    background-color: var(--Nav-svg-hover-color);
+  }
+}
+.animating-svg {
+  animation: pulsing-chat-box-svg 3s infinite ease alternate;
+}
+@keyframes pulsing-chat-box-svg {
+  0% {
+    fill: var(--Chat-box-dark-color);
+  }
+  20% {
+    fill: var(--Chat-box-light-color);
+  }
+  40% {
+    fill: var(--Chat-box-light-color);
+  }
+  60% {
+    fill: var(--Chat-box-light-color);
+  }
+  80% {
+    fill: var(--Chat-box-dark-color);
+  }
+  100% {
+    fill: var(--Chat-box-light-color);
   }
 }

@@ -1,8 +1,7 @@
 /*---------------------Global--------------------*/
 .first-page {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: var(--Pages-size-height);
   color: var(--Primary-Color);
   /* overflow: auto; */
 }
@@ -16,7 +15,6 @@
   z-index: -1;
 }
 /*--------------Header----------------------*/
-
 .header-container {
   height: 6%;
   width: var(--Full-width);
@@ -71,16 +69,14 @@
 .nav-bar {
   height: 5.6rem;
   width: var(--Full-width);
+  gap: 89rem;
 }
 .logo {
   width: 12rem;
   height: 2.4rem;
   fill: var(--Primary-Color);
-  flex: 1;
-  text-align: center;
-}
-.nav-menu {
-  flex: 9;
+  
+  text-align: var(--Centering-text);
 }
 .nav-menu-links {
   height: var(--Full-height);
@@ -91,20 +87,19 @@
 .nav-menu-links li {
   width: 9rem;
   height: 3.5rem;
-  text-align: center;
+  text-align: var(--Centering-text);
   line-height: 3.5rem;
   border-radius: 0.5rem;
 }
 .nav-menu-links li:hover {
   background-color: #8d8a8a6f;
-  cursor: pointer;
+  cursor: var(--Pointer-cursor);
   color: rgb(20, 20, 20);
   font-weight: var(--Nav-links-font-weight);
 }
 .nav-icons {
   height: var(--Full-height);
-  flex: 1;
-  gap: 1rem;
+  gap: 1.2rem;
   color: var(--Icons-color);
 }
 /*---------------------------main ------------------------*/
@@ -138,15 +133,14 @@
 .footer-container {
   height: 40%;
   width: 24%;
-  gap: 1rem;
 }
 .car-stats {
-  height: 40%;
+  height: 37%;
   width: 75%;
   gap: 6.2rem;
 }
 .demo-order-btns {
-  height: 35%;
+  height: 30%;
   width: 90%;
   gap: 2.2rem;
   font-size: var(--Primary-font-size);
@@ -157,15 +151,14 @@
   background-image: url(../images/Model-3-Exterior-Desktop-NA.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  height: var(--Pages-size-height);
   box-shadow: 0.1rem -8rem 130rem 0.1rem rgb(0, 0, 0);
   color: var(--Primary-Color);
 }
 .box-info {
   width: 28%;
   height: 17%;
-  text-align: center;
+  text-align: var(--Centering-text);
   gap: 1.5rem;
 }
 .box-info h1 {
@@ -174,7 +167,6 @@
 .box-info p {
   font-size: var(--Primary-font-size);
 }
-
 /*------------------sticky chat box--------------*/
 .sticky-chat-box {
   height: 4rem;
@@ -183,9 +175,28 @@
   border-radius: 0.4rem;
   position: sticky;
   top: 122rem;
+  fill: white;
   left: 245rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
+  animation: pulsing-chat-box 3s infinite ease alternate ;
 }
+@keyframes pulsing-chat-box {
+  0% {
+    background-color: var(--Chat-box-light-color);
+  }
+  20% {
+    background-color: var(--Chat-box-color);
+  }
+  40% {
+    background-color: var(--Chat-box-color);
+  }
+  60% {
+    background-color: var(--Chat-box-color);
+  }
+  80% {
+    background-color: var(--Chat-box-light-color);
+  }
+  100% {
+    background-color: var(--Chat-box-color);
+  }
+}
+

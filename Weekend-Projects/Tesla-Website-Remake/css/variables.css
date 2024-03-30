@@ -1,30 +1,42 @@
-:root{
-    --Primary-Color: white;
-    --Secondary-color:black;
+:root {
+  --Primary-Color: white;
+  --Secondary-color: black;
 
-    --Primary-font: "Gotham SSm A";
-    --Primary-font-color:white;
-    --Primary-font-bolding: 500;
-    --Primary-font-size: 1.4rem;
-    --Secondary-font-size: 1.7rem;
-    
-    --Icons-color:white;
+  --Pages-size-height: 100vh;
 
-    --Nav-links-font-size: 1.4rem;
-    --Nav-links-font-weight: 600;
-    --Nav-links-color: white;
+  --Primary-font: "Gotham SSm A";
+  --Primary-font-color: white;
+  --Primary-font-bolding: 500;
+  --Primary-font-size: 1.4rem;
+  --Secondary-font-size: 1.7rem;
+  --Centering-text: center;
+  --Pointer-cursor: pointer;
 
-    --Full-width: 100%;
-    --Full-height: 100%;
+  --Icons-color: white;
 
-    --Card-Width: 25%; 
-    --Card-Height: 100%; 
+  --Nav-links-font-size: 1.4rem;
+  --Nav-links-font-weight: 600;
+  --Nav-links-color: white;
+  --Nav-svg-hover-color: #484848a7;
 
-    --Button-Height: 55%;
-    --Button-Width: 45%;
-    --Button-font-size: 1.4rem ;
-    --Button-Border-Color: white;
-    --Button-Border-Radius: 0.4rem;
-    --Button-Hover-Animation-Duration: 0.5s;
+  --Full-width: 100%;
+  --Full-height: 100%;
+
+  --Card-Width: 25%;
+  --Card-Height: 100%;
+
+  --Button-Height: 55%;
+  --Button-Width: 45%;
+  --Button-font-size: 1.4rem;
+  --Button-Border-Color: white;
+  --Button-light-hover-Color: white;
+  --Button-dark-hover-Color: rgb(0, 0, 0);
+  --Button-Border-Radius: 0.4rem;
+  --Button-Hover-Animation-Duration: 0.5s;
+
+  --Chat-box-color: #3c3f44;
+  --Chat-box-light-color: white;
+  --Chat-box-dark-color: rgb(0, 0, 0);
+
+  --Svg-primary-color: white;
 }
-
