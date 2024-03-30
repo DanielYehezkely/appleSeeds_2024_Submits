@@ -1,0 +1,36 @@
+/*------------------------ Leptop Screen -----------------*/
+
+@media only screen and (max-width: 1850px) and (max-height: 1100px) {
+    
+  .middle-part{
+  flex:4;
+  }
+  .header-container{
+    padding-top: 3.5rem;
+  }
+  .main-header{
+    padding: 5rem 0 0 2.5rem;
+  }
+
+   .footer-container {
+    height: 60%;
+    width: 37%;
+    gap: 2rem;
+    padding-top: 1.5rem;
+  }
+   .btn {
+    height: 67%;
+   }
+
+   .box-info{
+    width: 45%;
+    height: 26%;
+   }
+
+   .sticky-chat-box {
+    top: 67rem;
+    left: 145rem;
+  }
+  }
+
+  

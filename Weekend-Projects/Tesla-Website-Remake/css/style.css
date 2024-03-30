@@ -175,8 +175,8 @@
   border-radius: 0.4rem;
   position: sticky;
   top: 122rem;
-  fill: white;
   left: 245rem;
+  fill: white;
   animation: pulsing-chat-box 3s infinite ease alternate ;
 }
 @keyframes pulsing-chat-box {
