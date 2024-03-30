@@ -106,6 +106,7 @@
 .main-container {
   width: var(--Full-width);
   height: 94%;
+  padding-left: 2rem;
 }
 /*-------------------------Main - Header----------------------------------------------------------*/
 .main-header {
