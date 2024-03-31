@@ -18,3 +18,8 @@
   width: 50%;
   height: 100%;
 }
+
+.box:hover::after {
+  background-color: yellow;
+}
+
