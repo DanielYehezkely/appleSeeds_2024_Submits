@@ -12,6 +12,10 @@ The project aims to replicate the Tesla website's layout, design, and functional
 - Navigation bar 
 - Advancing CSS and HTML
 
+## Netlify Link
+
+[https://dyz-tesle-web-site.netlify.app/](https://dyz-tesle-web-site.netlify.app/)
+
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/yourusername/tesla-web-remake.git`
@@ -21,6 +25,8 @@ The project aims to replicate the Tesla website's layout, design, and functional
 ## Credits
 
 - Design inspiration: [Tesla](https://www.tesla.com/model3)
+
+
 
 
 
