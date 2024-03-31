@@ -3,5 +3,5 @@ a {
 }
 
 a::after {
-    content: "(https://github.com/DanielYehezkely)";
+    content: attr(href);
 }
