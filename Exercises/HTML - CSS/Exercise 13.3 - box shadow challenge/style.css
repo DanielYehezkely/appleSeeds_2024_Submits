@@ -1,0 +1,74 @@
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 50%;
+    background-color: #c2bfbfb9;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px 1px rgba(0, 0, 0, 0.689);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .profile-card:hover{
+    box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.864);
+    transform: translate3d(-10px, -10px, 10px);
+  }
+  
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  .name {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .job-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .btn {
+    background-color: #e48a8a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0); 
+  }
+
+  .btn:hover {
+    background-color: #4aaa41;
+  }
+  
+  .btn i {
+    margin-right: 5px;
+  }
