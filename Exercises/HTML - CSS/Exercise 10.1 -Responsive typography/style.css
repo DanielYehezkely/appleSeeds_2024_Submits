@@ -1,0 +1,6 @@
+header{
+    height: 50vh;
+    width: 80vw;
+    background-color: rgba(191, 187, 187, 0.529);
+    overflow: auto; /* in case the text flow out of the values i gave the header*/
+}
