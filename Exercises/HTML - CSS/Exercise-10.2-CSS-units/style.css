@@ -1,0 +1,20 @@
+/* html{
+    font-size: 2em 2rem 2vw;
+} */
+
+.container{
+    background-color: #c7c2c237;
+    height: 300px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.container:nth-child(1){
+    font-size: 2em;
+}
+.container:nth-child(2){
+    font-size: 2rem;
+}
+.container:nth-child(3){
+    font-size: 2vw;
+}
