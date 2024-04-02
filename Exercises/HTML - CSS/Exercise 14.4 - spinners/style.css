@@ -1,0 +1,209 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  gap: 10rem;
+}
+
+/*---------------------------------- First -Spinner --------------------------------*/
+.first-spinner {
+  border: solid 4px gray;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border-bottom: solid 4px orange;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*---------------------------------- Second -Spinner --------------------------------*/
+
+.second-spinner {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.second-spinner:before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 75px;
+  height: 75px;
+  background-color: orange;
+  border-radius: 100%;
+  animation: snake 1s linear infinite;
+}
+.second-spinner::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  border-radius: 100%;
+  top: 4px;
+  left: 4px;
+  width: 95%;
+  height: 95%;
+}
+
+@keyframes snake {
+  0% {
+    transform: rotate(0deg) translateX(80px) rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) translateX(80px) rotate(-180deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(80px) rotate(-360deg);
+  }
+}
+
+/*---------------------------------- pulsing -loader--------------------------------*/
+
+.flashing-loader {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background: gray;
+  border-radius: 50%;
+  animation: second-pulse 1s ease infinite;
+}
+
+.flashing-loader::after,
+.flashing-loader::before {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 25px;
+  background: gray;
+  border-radius: 50%;
+}
+
+.flashing-loader::after {
+  top: 0;
+  left: -50px;
+  animation: first-pulse 1s ease infinite;
+}
+
+.flashing-loader::before {
+  top: 0;
+  right: -50px;
+  animation: third-pulse 1s ease infinite;
+}
+
+@keyframes first-pulse {
+  0% {
+    background: orangered;
+  }
+  100%{
+    background: gray;
+  }
+  
+}
+@keyframes second-pulse {
+  33.33% {
+    background: gray;
+  }
+  45% {
+    background: orangered;
+  }
+  100%{
+    background: gray;
+  }
+  
+}
+@keyframes third-pulse {
+  66.66% {
+    background: gray;
+  }
+  85% {
+    background: orangered;
+  }
+  100%{
+    background: gray;
+  }
+  
+}
+/*---------------------------------- popping-loader --------------------------------*/
+.popping-loader {
+  width: 120px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dots{
+  width: 25px;  
+  height: 25px;
+  background: orangered;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  animation: first-pop 1.2s infinite;
+  transform: scale(0);
+}
+.dot-2 {
+  animation: second-pop 1.2s infinite;
+  transform: scale(0);
+}
+.dot-3 {
+  animation: third-pop 1.2s infinite;
+  transform: scale(0);
+}
+
+
+  @keyframes first-pop{
+    0% {
+     transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    
+    100%{
+      transform: scale(0);
+    }
+    
+  }
+  @keyframes second-pop {
+    33.33% {
+      transform: scale(0);
+    }
+66% {
+  transform: scale(1);
+}
+    100%{
+      transform: scale(0);
+    }
+    
+  }
+  @keyframes third-pop {
+    66.66% {
+      transform: scale(0);
+    }
+    83.32% {
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(0);
+    }
+    
+  }
+
