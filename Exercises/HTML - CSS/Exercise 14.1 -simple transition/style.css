@@ -1,0 +1,27 @@
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    background-color: #AED8E6;
+    width: 20%;
+    height: 30%;
+    position: relative;
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 0;
+    background-color: #00018B;
+    transition: width 2s ease ;
+}
+
+.box:hover::after{
+    width: 100%;
+}
