@@ -1,0 +1,38 @@
+.grid-container{
+    height: 60vh;
+    width: 50vw;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "color-1 color-1 color-1 color-1"
+    "color-2 color-2 color-3 color-3"
+    "color-2 color-2 color-4 color-5"
+    ;
+    gap: 15px;
+}
+
+.box{
+    border-radius: 15px;
+    opacity: 0.7;
+}
+
+.box-1{
+    grid-area: color-1;
+    background-color: red;
+}
+.box-2{
+    grid-area: color-2;
+    background-color: blue;
+}
+.box-3{
+    grid-area: color-3;
+    background-color: green;
+}
+.box-4{
+    grid-area: color-4;
+    background-color: purple;
+}
+.box-5{
+    grid-area: color-5;
+    background-color: purple;
+}
