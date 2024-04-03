@@ -1,0 +1,23 @@
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+  .grid-container{
+    grid-template-areas: 
+    "color-1 color-1 color-1 color-1"
+    "color-2 color-3 color-3 color-3"
+    "color-4 color-4 color-4 color-4"
+    "color-5 color-5 color-5 color-5"
+    ;
+}
+
+}
+@media only screen and (max-width: 600px) {
+  .grid-container{
+    grid-template-areas: 
+    "color-1 color-1 color-1 color-1"
+    "color-2 color-2 color-2 color-2"
+    "color-3 color-3 color-3 color-3"
+    "color-4 color-4 color-4 color-4"
+    "color-5 color-5 color-5 color-5"
+    ;
+}
+
+}
