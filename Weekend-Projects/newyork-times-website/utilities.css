@@ -1,0 +1,17 @@
+/*-------------  FLEX-BOX ---------------------------*/
+.flex{
+    display: flex;
+}
+
+.flex-center-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*------------------------------------------------------------*/
+.bolding{
+    font-weight: bold;
+}
