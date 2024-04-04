@@ -19,6 +19,19 @@
   font-weight: 700;
 }
 
+.languages li {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    height: 80%;
+    transition: background-color 1s ease ;
+}
+
+.languages li:hover{
+     background-color: #c9c7c7a2;
+    cursor: pointer;
+}
+
 .btn {
   background-color: #567b95;
   color: white;
@@ -27,6 +40,12 @@
   border-radius: 0.3rem;
   font-size: 1.1rem;
   padding: 0.8rem 1.2rem;
+  transition: background-color 0.5s ease ;
+  cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #0b69ac;
 }
 
 .nav-link {
@@ -55,13 +74,13 @@
   display: flex;
   flex-direction: column;
 }
-.article-info h1 {
+.article-info h1 a{
   font-size: 2.2rem;
   line-height: 2.7rem;
   font-family: "NYT cheltenham", sans-serif;
 }
-.article-info p {
+.article-info p a {
   font-family: "NYT imperial", sans-serif;
   font-size: 1.4rem;
-  color: rgb(102, 101, 101);
+  color: rgb(143, 140, 140);
 }
