@@ -1,0 +1,71 @@
+/*----------       Background         ------------------------------*/
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*--------------   Welcome and log-in Texts   ---------------------*/
+
+.simple {
+  font-size: 1.7rem;
+}
+
+.dark-headline {
+  display: block;
+  font-size: 3rem;
+  font-weight: var(--primary-font-weight);
+  color: var(--dark-font);
+}
+
+/*--------------           Flex-Box          ---------------------*/
+
+.flexing-center-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.flexing-center-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.flexing-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*-------------------------     Inputs   -----------------------------*/
+.input-container {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+  position: relative;
+}
+
+.input-style {
+  border-radius: 1rem;
+  border: 1px solid rgb(218, 218, 218);
+  width: 90%;
+  height: 100%;
+}
+
+.wider-input {
+  height: 20%;
+}
+
+.dark-link {
+  text-decoration: underline;
+  font-weight: var(--primary-font-weight);
+  color: var(--dark-font);
+}
+.dark-link:hover {
+  color: blue;
+}
