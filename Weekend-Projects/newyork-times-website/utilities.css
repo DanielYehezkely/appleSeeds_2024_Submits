@@ -1,32 +1,67 @@
 /*-------------  FLEX-BOX ---------------------------*/
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 }
 
-.flex-center-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.flex-end-end{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+.flex-end-end {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
-
-
 
 /*------------------------------------------------------------*/
-.bolding{
-    font-weight: 700;
+.bolding {
+  font-weight: 700;
 }
 
 .btn {
-    background-color: #567B95;
-    color: white;
-    border: none;
-    height: 26%;
-    border-radius: 0.3rem;
-    font-size: 1.1rem;
-    padding: 0.8rem 1.2rem ;
+  background-color: #567b95;
+  color: white;
+  border: none;
+  height: 30%;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.nav-link {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  left: -1px;
+  width: 100%;
+  border-bottom: 3px solid black;
+}
+
+.nav-link::after {
+  content: url(./images/svgexport-8.svg);
+  position: absolute;
+  right: -12px;
+}
+
+.article-info {
+  display: flex;
+  flex-direction: column;
+}
+.article-info h1 {
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+  font-family: "NYT cheltenham", sans-serif;
+}
+.article-info p {
+  font-family: "NYT imperial", sans-serif;
+  font-size: 1.4rem;
+  color: rgb(102, 101, 101);
 }
