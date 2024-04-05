@@ -14,24 +14,34 @@
   justify-content: flex-end;
 }
 
-/*------------------------------------------------------------*/
+/*--------------------  Font-bolding ----------------------------------------*/
 .bolding {
   font-weight: 700;
 }
-
-.languages li {
-    display: flex;
-    align-items: center;
-    border-radius: 0.5rem;
-    height: 80%;
-    transition: background-color 1s ease ;
+.less-bolding {
+  font-weight: 600;
 }
-
-.languages li:hover{
-     background-color: #c9c7c7a2;
-    cursor: pointer;
+/*----------- HOVERS -----------------------------*/
+.hovering:hover {
+  opacity: 0.8;
 }
-
+.language-link:hover {
+  background-color: #c9c7c7a2;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #0b69ac;
+}
+/*-------------- LANGUAGES -----------------*/
+.language-link {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  height: 80%;
+  font-size: 1rem;
+  transition: background-color 1s ease;
+}
+/*----------------- BUTTONS ---------------------------*/
 .btn {
   background-color: #567b95;
   color: white;
@@ -40,19 +50,17 @@
   border-radius: 0.3rem;
   font-size: 1.1rem;
   padding: 0.8rem 1.2rem;
-  transition: background-color 0.5s ease ;
+  transition: background-color 0.5s ease;
   cursor: pointer;
 }
-
-.btn:hover{
-    background-color: #0b69ac;
-}
+/*-------------- NAV-Links*/
 
 .nav-link {
   position: relative;
   height: 100%;
   display: flex;
   align-items: center;
+  font-size: 1.2rem;
 }
 
 .nav-link:hover::before {
@@ -65,22 +73,62 @@
 }
 
 .nav-link::after {
-  content: url(./images/svgexport-8.svg);
+  content: url(./svg/nav-link-down-arrow.svg);
   position: absolute;
   right: -12px;
 }
-
-.article-info {
+/*----------------------Articles----------------------------------*/
+.article-structure {
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  border-bottom: 1px solid black;
+}
+.article-content-container {
+  width: 32%;
+}
+.article-media-container {
+  width: 68%;
+}
+.article-media-sizing {
+  width: 100%;
+}
+.article-content {
   display: flex;
   flex-direction: column;
-}
-.article-info h1 a{
-  font-size: 2.2rem;
-  line-height: 2.7rem;
+  cursor: pointer;
+  gap: 1rem;
   font-family: "NYT cheltenham", sans-serif;
 }
-.article-info p a {
+
+.article-content h1 {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+.article-content p {
   font-family: "NYT imperial", sans-serif;
   font-size: 1.4rem;
   color: rgb(143, 140, 140);
+}
+
+/*-------------------- ASIDE ETC ------------------------*/
+
+.sizing-aside {
+  width: 90%;
+}
+
+.mini-article {
+  font-family: "NYT cheltenham", sans-serif;
+  font-size: 1.6rem;
+  gap: 0.5rem;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  cursor: pointer;
+}
+
+.sizing-mini-article {
+  width: 80%;
 }
