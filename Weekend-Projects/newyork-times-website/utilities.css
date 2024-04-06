@@ -114,10 +114,6 @@
 
 /*-------------------- ASIDE ETC ------------------------*/
 
-.sizing-aside {
-  width: 90%;
-}
-
 .mini-article {
   font-family: "NYT cheltenham", sans-serif;
   font-size: 1.6rem;
@@ -126,21 +122,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  position: relative;
   cursor: pointer;
 }
 
 .sizing-mini-article {
-  width: 80%;
+  width: 90%;
 }
 
-/*--------------- OPINIONS -------------------------------*/
+/*--------------- OPINIONS ASIDE-------------------------------*/
 .opinions-headline{
   font-family: "NYT Franklin", helvetica, arial, sans-serif;
   width: 95%;
 }
 .article-horizontal{
-  width: 89%;
+  width: 95%;
   padding-top: 1.5rem;
   display: flex;
   border-top: 1px solid rgb(185, 183, 183);
@@ -152,20 +147,28 @@
   display: flex;
   flex-direction: column;
   line-height: 2.3rem;
+  width: 100%;
 }
 .article-horizontal-content span{
   color: rgb(143, 140, 140);
   font-size: 1.1rem;
 }
-
 .writer-image{
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-
 .article-image {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+/*-------------- BORDERING-----------*/
+.non-bordering{
+  border:none;
+}
+.bordering-top{
+  border-top: solid 1px rgb(185, 183, 183);
+  padding-top: 1rem;
 }
