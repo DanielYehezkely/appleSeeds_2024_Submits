@@ -24,6 +24,7 @@
 /*----------- HOVERS -----------------------------*/
 .hovering:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 .language-link:hover {
   background-color: #c9c7c7a2;
@@ -131,4 +132,40 @@
 
 .sizing-mini-article {
   width: 80%;
+}
+
+/*--------------- OPINIONS -------------------------------*/
+.opinions-headline{
+  font-family: "NYT Franklin", helvetica, arial, sans-serif;
+  width: 95%;
+}
+.article-horizontal{
+  width: 89%;
+  padding-top: 1.5rem;
+  display: flex;
+  border-top: 1px solid rgb(185, 183, 183);
+  gap: 1rem;
+}
+.article-horizontal-content{
+  font-family: "NYT cheltenham", sans-serif;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 2.3rem;
+}
+.article-horizontal-content span{
+  color: rgb(143, 140, 140);
+  font-size: 1.1rem;
+}
+
+.writer-image{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.article-image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
