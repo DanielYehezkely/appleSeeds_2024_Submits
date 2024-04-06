@@ -113,21 +113,17 @@ header {
   border-right: 1px solid rgba(0, 0, 0, 0.116);
 }
 /*------------- MOBILE - HEADER --------------*/
-
 .mobile-menu-icon {
-  display: none;
   height: 100%;
   width: 10%;
   font-size: 2rem;
 }
 .mobile-user-icon {
-  display: none;
   height: 100%;
   width: 10%;
   font-size: 2rem;
 }
-
-.mobile-date-bar{
+.mobile-date-bar {
   background-color: #ebe9e98a;
   height: 1.5%;
   width: 100%;
@@ -137,11 +133,16 @@ header {
   font-weight: bold;
   font-family: "NYT Franklin", helvetica, arial, sans-serif;
   gap: 50%;
-  display: none;
 }
-.mobile-subscribe a{
+.mobile-subscribe a {
   color: rgb(90, 117, 192);
   font-size: 1rem;
+}
+
+.mobile-menu-icon,
+.mobile-user-icon,
+.mobile-date-bar {
+  display: none;
 }
 /********************** MAIN *********************************/
 .main-container {
@@ -310,24 +311,18 @@ header {
 }
 
 /*-----------------------------------------------------------------------*/
-
 .first-article {
   grid-area: first-art;
 }
-
-/*--------------------------------------------------------*/
-
+/*-----------------------------------------------------------------------*/
 .second-article {
   grid-area: second-art;
 }
-
-/*----------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
 .third-article {
   grid-area: third-art;
 }
-
-/*----------------------------------------------------------------*/
-
+/*---------------------------- Opinion - Aside ----------------------------*/
 .opinions-aside {
   grid-area: opinion-aside;
   border-left: solid 1px rgb(185, 183, 183);

@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/ff4fdea354.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/ff4fdea354.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="utilities.css" />
@@ -14,6 +17,7 @@
   </head>
   <body>
     <div class="global-container">
+      <!------------------------------- Header --------------->
       <header class="header-container flex-center-center">
         <div class="user-bar flex-center-center">
           <div class="search-icon">
@@ -32,7 +36,9 @@
           </div>
         </div>
         <div class="times-bar flex-center-center">
-          <div class="mobile-menu-icon flex-center-center"><i class="fa-solid fa-bars"></i></div>
+          <div class="mobile-menu-icon flex-center-center">
+            <i class="fa-solid fa-bars"></i>
+          </div>
           <div class="date-box flex">
             <span class="bolding"> Thursday, April 4, 2024 </span>
             <a class="hovering" href="todays-paper">Today's Paper</a>
@@ -46,7 +52,9 @@
             <div class="stock-name">Nasdaq</div>
             <div class="stock-precentage">+0.42%</div>
           </div>
-          <div class="mobile-user-icon flex-center-center"><i class="fa-solid fa-user"></i></div>
+          <div class="mobile-user-icon flex-center-center">
+            <i class="fa-solid fa-user"></i>
+          </div>
         </div>
         <nav class="nav-bar flex-center-center">
           <ul class="nav-links flex-center-center">
@@ -64,15 +72,14 @@
           </ul>
         </nav>
       </header>
+      <!------------------------------- Header-Mobile --------------->
       <div class="mobile-date-bar flex-center-center">
-          <div class="date ">
-            Saturday, April 6, 2024
-          </div>
-          <div class="mobile-subscribe">
-            <a href="#">SUBSCRIBE FOR $0.50/WEEK</a>
-          </div>
+        <div class="date">Saturday, April 6, 2024</div>
+        <div class="mobile-subscribe">
+          <a href="#">SUBSCRIBE FOR $0.50/WEEK</a>
+        </div>
       </div>
-
+<!------------------------------- Main - Grid - Container --------------->
       <main class="main-container">
         <section class="main-topic">
           <div class="topic-content article-content hovering">
@@ -100,21 +107,24 @@
             >
           </div>
           <div class="topic-video">
-            <img class="play-button" src="./svg/play-button.svg" alt="">
-            <img class="play-button-second" src="./svg/hover-play-button.svg" alt="">
+            <img class="play-button" src="./svg/play-button.svg" alt="" />
+            <img
+              class="play-button-second"
+              src="./svg/hover-play-button.svg"
+              alt=""
+            />
             <video class="video" id="video" controls muted>
               <source src="./videos/random-video.mp4" type="video/mp4" />
             </video>
           </div>
         </section>
-
+<!------------------------------- Main - Aside --------------->
         <aside class="main-aside">
-          <div class="big-article  article-content hovering">
+          <div class="big-article article-content hovering">
             <img
               class="big-article-content"
               src="https://static01.nyt.com/images/2024/04/03/arts/music/03fiveminutes-shirley-horn-cover/03fiveminutes-shirley-horn-cover-threeByTwoMediumAt2X.png?format=pjpg&quality=75&auto=webp&disable=upscale"
               alt="big-article-image"
-              
             />
             <h1 class="big-article-content less-bolding">
               5 Minutes That Will Make You Love Shirley Horn
@@ -125,7 +135,7 @@
               vocalist.
             </p>
           </div>
-          <div class="left-article mini-article bolding hovering ">
+          <div class="left-article mini-article bolding hovering">
             <img
               class="sizing-mini-article bordering-top"
               src="https://static01.nyt.com/images/2024/04/01/well/WELL-EYE-DROPS/WELL-EYE-DROPS-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"
@@ -148,7 +158,7 @@
             </p>
           </div>
         </aside>
-
+<!------------------------------- Section of 2024 --------------->
         <section class="section-2024">
           <div class="tags-2024">
             <ul class="tags-2024-links">
@@ -185,7 +195,7 @@
             </div>
           </article>
         </section>
-
+<!------------------------------- First - Article - Astronomy --------------->
         <article class="first-article article-structure">
           <div class="article-content-container article-content hovering">
             <h1>
@@ -210,7 +220,7 @@
             ></video>
           </div>
         </article>
-
+<!------------------------------- First - Article - Chinese --------------->
         <article class="second-article article-structure">
           <div class="article-content-container article-content hovering">
             <h1>China’s Young People Are Giving Up on Saving for Retirement</h1>
@@ -228,7 +238,7 @@
             />
           </div>
         </article>
-
+<!------------------------------- First - Article - Cyber attack --------------->
         <article class="third-article article-structure">
           <div class="article-content-container article-content hovering">
             <h1>Did One Guy Just Stop a Huge Cyberattack?</h1>
@@ -244,7 +254,7 @@
             alt="second-article-image" />
           </div>
         </article>
-<!-- ------------- ASIDE------------------------ -->
+        <!------------------------------- Opinion- Aside ----------------->
         <aside class="opinions-aside bolding">
           <h1 class="opinions-headline">Opinion</h1>
           <article class="hovering article-horizontal non-bordering">
@@ -307,7 +317,7 @@
           <article class="hovering article-horizontal">
             <div class="article-horizontal-content">
               <span class="writer-name"> RYAN MILLIGAN </span>
-             You Don’t Just See a Total Solar Eclipse. You Feel It Completely.
+              You Don’t Just See a Total Solar Eclipse. You Feel It Completely.
             </div>
           </article>
 
