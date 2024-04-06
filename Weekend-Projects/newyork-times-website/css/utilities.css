@@ -91,7 +91,7 @@
 }
 
 .nav-link::after {
-  content: url(./svg/nav-link-down-arrow.svg);
+  content: url(../svg/nav-link-down-arrow.svg);
   position: absolute;
   right: -12px;
 }

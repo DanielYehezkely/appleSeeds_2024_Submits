@@ -1,12 +1,12 @@
 @font-face {
   font-family: "NYT Franklin";
-  src: url("./fonts/franklin-normal-300.ttf") format("truetype");
+  src: url("../fonts/franklin-normal-300.ttf") format("truetype");
 }
 @font-face {
   font-family: "NYT cheltenham";
-  src: url("./fonts/cheltenham-normal-200.ttf") format("truetype");
+  src: url("../fonts/cheltenham-normal-200.ttf") format("truetype");
 }
 @font-face {
   font-family: "NYT imperial";
-  src: url("./fonts/imperial-normal-500.ttf") format("truetype");
+  src: url("../fonts/imperial-normal-500.ttf") format("truetype");
 }

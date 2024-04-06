@@ -82,7 +82,7 @@ header {
   position: relative;
 }
 .stock-precentage::after {
-  content: url(./svg/stock-arrow.svg);
+  content: url(../svg/stock-arrow.svg);
   position: absolute;
   right: -1rem;
 }
