@@ -1,0 +1,89 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.solar-system {
+  width: 25%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+
+.sun {
+  background-color: yellow;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  position: relative;
+}
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+
+#mercury-orbit {
+  height: 19rem;
+  width: 19rem;
+  animation: rotate-left 8s linear infinite;
+}
+#venus-orbit {
+  height: 27rem;
+  width: 27rem;
+  animation: rotate 9s linear infinite;
+}
+#plutto-orbit {
+  height: 36rem;
+  width: 36rem;
+  animation: rotate-left 5s linear infinite;
+}
+#mars-orbit {
+  height: 46rem;
+  width: 46rem;
+  animation: rotate 12s linear infinite;
+}
+
+.planet{
+    border-radius: 50%;
+    position: absolute;
+    top: 1%;
+}
+
+.mercury{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #9a5959;
+    left: 50%;
+}
+.venus{
+    width: 2rem;
+    height: 2rem;
+    background-color: #7280ad;
+    left: 50%;
+}
+.plutto{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #608a60;
+    left: 50%;
+}
+.mars{
+    width: 3rem;
+    height: 3rem;
+    background-color: #0c5fd3;
+    left: 50%;
+}
+
+@keyframes rotate {
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+}
+@keyframes rotate-left {
+    from{transform: rotate(0);}
+    to{transform: rotate(-360deg);}
+}
