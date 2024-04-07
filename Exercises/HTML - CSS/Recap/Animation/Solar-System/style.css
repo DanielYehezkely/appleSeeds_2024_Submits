@@ -1,0 +1,75 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.solar-system{
+   width: 15%;
+   height: 25%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+
+.planet{
+    border-radius: 100%;
+    border: transparent;
+}
+
+.sun{
+    background-color: yellow;
+    height: 40%;
+    width: 35%;
+}
+
+
+#mercury-orbit{
+    width: 75%;
+    height: 40%;
+    position: absolute;
+    animation: orbit-rotation 3s linear infinite; 
+}
+
+@keyframes orbit-rotation {
+    0%{
+        transform: rotate(0deg); 
+    }
+    100%{
+        transform: rotate(360deg); 
+    }
+}
+
+#venus-orbit{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    animation: orbit-rotation 5s linear infinite; 
+}
+
+
+.orbit{
+    border: 1px white dashed;
+    position: relative;
+    border-radius: 50%;
+}
+
+.mercury{
+    background-color: purple;
+    width: 5%;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.venus{
+    background-color: blue;
+    width: 10%;
+    height: 6%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
