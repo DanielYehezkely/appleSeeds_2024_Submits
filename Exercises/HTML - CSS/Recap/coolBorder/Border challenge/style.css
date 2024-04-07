@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f9fe;
+}
+
+.decorative-border {
+  width: 15%;
+  height: 15%;
+  background-color: #ffffff3e;
+  border: solid 0.5rem blue;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  box-shadow: 1px 1px 10px 1px black;
+  position: relative;
+}
+
+.decorative-border::after {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 15px 1px rgb(14, 214, 236);
+}
+
+.decorative-border::before {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 110%;
+  border-radius: 3rem;
+  border: dotted 5px rgb(64, 95, 168);
+}
