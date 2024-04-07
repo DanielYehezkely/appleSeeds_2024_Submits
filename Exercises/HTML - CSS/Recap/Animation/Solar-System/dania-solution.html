@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Solar System Model</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000; /* Space background */
+            overflow: hidden;
+        }
+
+        .solar-system {
+            position: relative;
+            width: 600px;
+            height: 600px;
+        }
+
+        .sun {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px dashed grey; /* Path of the orbit */
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+        }
+
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            left: 50%;
+            transform-origin: top;
+        }
+
+        #mercury-orbit {
+            width: 180px;
+            height: 100px;
+            margin-top: -50px;
+            margin-left: -90px;
+            animation: orbitMercury 3s linear infinite;
+        }
+
+        .mercury {
+            width: 8px;
+            height: 8px;
+            background-color: grey;
+            transform: translateX(-50%);
+        }
+
+        #venus-orbit {
+            width: 220px;
+            height: 140px;
+            margin-top: -70px;
+            margin-left: -110px;
+            animation: orbitVenus 5s linear infinite;
+        }
+
+        .venus {
+            width: 12px;
+            height: 12px;
+            background-color: orange;
+            transform: translateX(-50%);
+        }
+
+        /* Animations */
+        @keyframes orbitMercury {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes orbitVenus {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Add more planets with corresponding styles and animations as desired */
+    </style>
+</head>
+<body>
+
+<div class="solar-system">
+    <div class="sun"></div>
+    <div class="orbit" id="mercury-orbit"><div class="planet mercury"></div></div>
+    <div class="orbit" id="venus-orbit"><div class="planet venus"></div></div>
+    <!-- Add more orbits and planets as needed -->
+</div>
+
+</body>
+</html>

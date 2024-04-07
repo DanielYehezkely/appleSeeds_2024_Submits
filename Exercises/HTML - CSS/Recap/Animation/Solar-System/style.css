@@ -54,6 +54,7 @@ body{
     border: 1px white dashed;
     position: relative;
     border-radius: 50%;
+    transform-origin: center;
 }
 
 .mercury{
