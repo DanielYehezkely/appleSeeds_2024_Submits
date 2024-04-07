@@ -1,20 +1,201 @@
-body{
-    height: 100vh;
-    background: linear-gradient(#6BBDEC, #204b6e , #041d32);
+body {
+  height: 100vh;
+  background: linear-gradient(#6bbdec, #204b6e, #041d32);
 }
 .ocean {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-.fish{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    width: 20%;
-    height: 20%;
-    background-color: rgb(229, 186, 105);
+.fish {
+  position: absolute;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 35%;
+  border-bottom-left-radius: 40%;
+  width: 1.8%;
+  height: 2%;
+}
+
+.nemo {
+  background: linear-gradient(
+    30deg,
+    #ff7300 30%,
+    #000000 40%,
+    #ffffff 45%,
+    black 60%,
+    #ff7300 65%
+  );
+  top: 70%;
+  left: -5rem;
+  animation: swim-nemo 12s ease-in-out infinite;
+}
+.dory {
+  background: linear-gradient(
+    30deg,
+    blue 30%,
+    #000000 40%,
+    #ecf502 45%,
+    black 60%,
+    blue 65%
+  );
+  top: 40%;
+  right: -5rem;
+  transform: rotate(180deg) scaleY(-1);
+  animation: swim-dory 8s ease-in-out infinite;
+}
+
+@keyframes swim-nemo {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(205vh) scaleX(-1);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+@keyframes swim-dory {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(-205vh) scaleX(-1);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+
+.bubble {
+  position: absolute;
+  width: 0.3%;
+  height: 0.5%;
+  background-color: #ffffff84;
+  border-radius: 100%;
+}
+
+.left {
+  bottom: -1rem;
+  left: 20%;
+  animation: float 10s linear infinite;
+  animation-delay: 3s;
+}
+.middle {
+  bottom: -1rem;
+  left: 50%;
+  animation: float 10s linear infinite;
+}
+.right {
+  bottom: -1rem;
+  left: 80%;
+  animation: float 10s linear infinite;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.seaweed {
+  position: absolute;
+  width: 0.7%;
+  height: 10%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background: linear-gradient(to top, #2ecc71, #27ae60);
+  animation: sway 5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+.one {
+  bottom: 0;
+  left: 44%;
+}
+.two {
+  bottom: 0;
+  left: 48%;
+}
+.three {
+  bottom: 0;
+  left: 52%;
+}
+.four {
+  bottom: 0;
+  left: 56%;
+}
+.five {
+  bottom: 0;
+  left: 60%;
+}
+
+.jellyfish {
+  position: relative;
+  top: 20%;
+  left: 20%;
+  width: 5%;
+  height: 8%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  background: linear-gradient(pink, purple);
+  animation: jelly-float 5s ease infinite;
+  z-index: 1;
+}
+
+.jellyfish::after,
+.jellyfish::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  bottom: -48%;
+  border-right: 0.5rem solid pink;
+  border-left: 0.5rem solid pink;
+  border-radius: 10%;
+  z-index: -3;
+}
+
+.jellyfish::after {
+  left: 15%;
+}
+
+.jellyfish::before {
+  right: 15%;
+}
+
+@keyframes jelly-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
