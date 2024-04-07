@@ -1,0 +1,81 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b6b4b469;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  height: 30%;
+}
+
+.card {
+  width: 20%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.gradient-border {
+  border-image: linear-gradient(45deg, #f63cd4, #010101) 30;
+  border-width: 0.4rem;
+  border-style: solid;
+}
+.animated-border{
+    border: 0.4rem dashed #e93395 ;
+    border-radius: 1rem;
+    animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+.shape-border {
+  background-color: #e93395;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.marching-border{
+    border: 0.4rem black solid;
+    border-radius: 1rem;
+    position: relative;
+    transition: border-color 1s ease ;
+    animation: fading-out 1s linear infinite;
+}
+
+@keyframes fading-out {
+    0%{border-color: black;}
+    50%{border-color: rgb(255, 255, 255);}
+    100%{border-color: black;}
+}
+
+.marching-border::after{
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    border: 0.5rem black solid;
+    border-radius: 1rem;
+    opacity: 0;
+    animation: fading-in 1s linear infinite;
+}
+.marching-border::before{
+    content: '';
+    position: absolute;
+    width: 103%;
+    height: 103%;
+    border: 0.4rem black solid;
+    border-radius: 1rem;
+    opacity: 0;
+    animation: fading-in 1s linear infinite;
+}
+@keyframes fading-in {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}`
