@@ -1,0 +1,98 @@
+body {
+  height: 100vh;
+}
+
+/*------------------- HEADER ----------------------*/
+.header {
+  height: 25.15%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+/* --- User-Bar ---*/
+.user-bar {
+  height: 34%;
+  background-color: rgb(19, 25, 33);
+  display: flex;
+}
+.logo{
+    width: 12.6rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 9.7rem;
+    height: 3rem;
+}
+.shipment{
+    width: 9.64rem;
+    height: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.search-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 89rem;
+}
+
+.search-box{
+    height: 4rem;
+    width: 100%;
+    border-radius: 0.4rem;
+    display: flex;
+    overflow: hidden;
+}
+.search-in-box{
+    width: 5rem;
+    height: 100%;
+    background-color: rgb(199, 196, 196);
+    font-size: 1.6rem;
+    text-align: center;
+    padding-top: 0.8rem;
+}
+
+.search-form{
+    display: flex;
+    height: 100%;
+    width: 84rem;
+    background-color: white;
+    position: relative;
+}
+
+.search-input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.search-btn{
+    height: 100%;
+    width: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FEBD69;
+    border: none;
+    position: absolute;
+    right: 0;
+}
+.search-btn img{
+    width: 60%;
+    height: 60%;
+}
+/* --- Nav-Bar ---*/
+.nav-bar {
+  height: 22%;
+}
+.note-bar {
+  height: 18%;
+}
+.commercial-bar {
+  height: 26%;
+}
