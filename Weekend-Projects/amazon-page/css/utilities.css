@@ -1,15 +1,26 @@
 /*--------- USER - BAR -------*/
-.texters{
-    color: #cccccc;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-weight: 500;
-    line-height: 1.5rem;
+.texters {
+  color: #cccccc;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: 500;
+  line-height: 1.5rem;
+  height: 100%;
+}
+.light-texters-color {
+  color: white;
 }
 .texters h2 {
-    font-weight: bold;
-    font-size: 1.4rem;
-    color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+}
+.hovering-border{
+cursor: pointer;
+}
+.hovering-border:hover{
+    border: 1px solid white;
 }

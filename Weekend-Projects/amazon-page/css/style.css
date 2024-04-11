@@ -14,78 +14,137 @@ body {
   height: 34%;
   background-color: rgb(19, 25, 33);
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.logo{
-    width: 12.6rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
+.logo {
+  width: 11rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-.logo img{
-    width: 9.7rem;
-    height: 3rem;
+.logo img {
+  width: 9.7rem;
+  height: 3rem;
 }
-.shipment{
-    width: 9.64rem;
-    height: 90%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+.shipment {
+  width: 8rem;
+  height: 100%;
+  display: flex;
 }
-.search-container{
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 89rem;
+.location-icon{
+  height: 100%;
+  padding-top: 2.8rem;
+  padding-right: 0.2rem;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 89rem;
+}
+.search-box {
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.4rem;
+  display: flex;
+  overflow: hidden;
+}
+.search-in-box {
+  width: 5rem;
+  height: 100%;
+  background-color: rgb(199, 196, 196);
+  font-size: 1.2rem;
+  text-align: center;
+  padding-top: 1rem;
+  position: relative;
+  color: rgb(110, 110, 110);
+}
+.search-form {
+  display: flex;
+  height: 100%;
+  width: 84rem;
+  background-color: white;
+  position: relative;
+}
+.search-in-box::after {
+  position: absolute;
+  content: url(../svgs/dropDown-arrow.svg);
+  width: 0.7rem;
+  height: 0.7rem;
+  right: 0.5rem;
+}
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 1.5rem;
+  font-size: 1.6rem;
+}
+.search-btn {
+  height: 100%;
+  width: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #faa940;
+  border: none;
+  position: absolute;
+  right: 0;
+  opacity: 0.8;
+}
+.search-btn:hover{
+  opacity: 1;
+}
+.search-btn img {
+  width: 60%;
+  height: 60%;
+}
+.country {
+  width: 6.5rem;
+  align-items: center;
+  padding-top: 1.5rem;
+  position: relative;
+}
+.country::after {
+  position: absolute;
+  content: url(../svgs/dropDown-arrow-light.svg);
+  width: 0.7rem;
+  height: 0.7rem;
+  right: 20%;
+  top: 50%;
+}
+.country::before {
+  position: absolute;
+  content: url(../svgs/united-states-flag-icon.svg);
+  width: 2.1rem;
+  left: 0rem;
+}
+.accounts{
+  position: relative;
+  width: 13rem;
+}
+.accounts::after{
+position: absolute;
+  content: url(../svgs/dropDown-arrow-light.svg);
+  width: 0.7rem;
+  height: 0.7rem;
+  right: 0;
+  top: 50%;
 }
 
-.search-box{
-    height: 4rem;
-    width: 100%;
-    border-radius: 0.4rem;
-    display: flex;
-    overflow: hidden;
+.cart-box{
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
-.search-in-box{
-    width: 5rem;
-    height: 100%;
-    background-color: rgb(199, 196, 196);
-    font-size: 1.6rem;
-    text-align: center;
-    padding-top: 0.8rem;
+.cart-box h2{
+   font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+  padding-top: 1.5rem;
 }
 
-.search-form{
-    display: flex;
-    height: 100%;
-    width: 84rem;
-    background-color: white;
-    position: relative;
-}
-
-.search-input{
-    width: 100%;
-    border: none;
-    outline: none;
-    padding-left: 1.5rem;
-    font-size: 1.6rem;
-}
-
-.search-btn{
-    height: 100%;
-    width: 4.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FEBD69;
-    border: none;
-    position: absolute;
-    right: 0;
-}
-.search-btn img{
-    width: 60%;
-    height: 60%;
-}
 /* --- Nav-Bar ---*/
 .nav-bar {
   height: 22%;
