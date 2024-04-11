@@ -24,3 +24,11 @@ cursor: pointer;
 .hovering-border:hover{
     border: 1px solid white;
 }
+/*---------------Nav-Bar-----------*/
+.link{
+  color: white;
+  font-size: 1.4rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}

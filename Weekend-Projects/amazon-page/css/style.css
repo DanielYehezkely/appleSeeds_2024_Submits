@@ -7,11 +7,10 @@ body {
   height: 25.15%;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
 }
 /* --- User-Bar ---*/
 .user-bar {
-  height: 34%;
+  height: 35%;
   background-color: rgb(19, 25, 33);
   display: flex;
   align-items: center;
@@ -132,7 +131,6 @@ position: absolute;
   right: 0;
   top: 50%;
 }
-
 .cart-box{
   display: flex;
   height: 100%;
@@ -144,14 +142,72 @@ position: absolute;
   color: white;
   padding-top: 1.5rem;
 }
-
 /* --- Nav-Bar ---*/
 .nav-bar {
   height: 22%;
+  background-color: #232F3E;
 }
+.nav-links{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding-left: 1.8rem;
+  gap: 2rem;
+}
+.menu-icon{
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.3rem;
+}
+/*---------NOTE-BAR---------*/
 .note-bar {
-  height: 18%;
+  height: 14.5%;
+  background-color: #D8F7EB;
+  font-weight: 700;
+  color: black;
+  font-size: 1.4rem;
+  padding-left: 1.8rem;
+  padding-top: 0.6rem;
 }
+
+/*--------------------------*/
 .commercial-bar {
-  height: 26%;
+  height: 28.5%;
+  border-top: 1px solid rgb(210, 212, 216);
+  border-bottom: 1px solid rgb(210, 212, 216);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+}
+.commercial-logo{
+  background-image: url(../images/commercial-logo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 8%;
+}
+.commercial-text{
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.commercial-rating-box{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.price{
+  font-size: 2.2rem;
+  color: rgb(153, 4, 4);
+}
+.price > p > span:first-child {
+  font-weight: 700;
+}
+.previous-price{
+  font-size: 1.6rem;
+  color: black;
+  text-decoration: line-through;
 }
