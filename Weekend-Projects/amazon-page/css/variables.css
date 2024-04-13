@@ -1,0 +1,9 @@
+:root{
+    --primary-header-font-color:white;
+    --secondary-header-font-color:black;
+    --primary-header-font-size:1.4rem;
+    
+    --primary-border:1px solid rgb(210, 212, 216);
+
+    --dropDown-btns-background:rgb(224, 224, 224);
+}
