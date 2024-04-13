@@ -32,3 +32,103 @@
   display: flex;
   align-items: center;
 }
+/*---------------------PRODUCT-IMAGE-------------*/
+.product-angle-img{
+  border: 1px solid black;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.product-angle-img:hover{
+  box-shadow: 1px 1px 8px 1px rgb(114, 194, 194);
+}
+/*-----------------Product-Content-----------------*/
+.linkers{
+  font-size: 1.4rem;
+  color: #007185;
+}
+.linkers:hover{
+  text-decoration: underline;
+  color: red;
+  cursor: pointer;
+}
+.small-linkers{
+  font-size: 1.2rem;
+  color: #007185;
+}
+.small-linkers:hover{
+  text-decoration: underline;
+  color: red;
+  cursor: pointer;
+}
+
+.product-price{
+  color: black;
+  font-size: 2.8rem;
+  position: relative;
+  margin-left: 1rem;
+}
+.product-price::after{
+  position: absolute;
+  content: '99';
+  font-size: 1.1rem;
+  top: 0.9rem;
+}
+.product-price::before{
+  position: absolute;
+  content: '$';
+  font-size: 1.4rem;
+  top: 0.8rem;
+  left: -1rem;
+}
+.bolding{
+  font-weight: 700;
+}
+.size-input{
+  color: #565959;
+  font-size: 1.4rem;
+}
+.size-input label{
+  display: block;
+}
+.size-input select{
+  border-radius: 0.4rem;
+  border: var(--primary-border);
+  font-size: 1.3rem;
+  width: 4.6rem;
+  height: 3rem;
+  text-align: center;
+  background-color: #F0F2F2;
+  box-shadow: 0.5px 0px 3px 0.5px #bec2c2 ;
+}
+.normalize{
+  color: black;
+}
+.shipping{
+  font-size: 1.4rem;
+  color: #565959;
+}
+.delivery{
+color: black;
+font-size: 1.4rem;
+}
+
+.btn{
+  width: 100%;
+  height: 3.1rem;
+  background-color: #FFD814;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+}
+.orange-btn{
+  background-color: #FFA41C;
+}
+.light-btn{
+  background-color: #fff;
+  border-radius: var(--primary-border);
+  width: 95%;
+  height: 4%;
+  border-radius: 1rem;
+  text-align: start;
+  padding-left: 1rem;
+}
