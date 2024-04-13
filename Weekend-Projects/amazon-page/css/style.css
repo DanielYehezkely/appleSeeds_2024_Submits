@@ -317,8 +317,6 @@ body {
 .color-imgs img {
   border: var(--primary-border);
 }
-.product-details {
-}
 .product-details p {
   font-size: 1.8rem;
 }
@@ -334,17 +332,16 @@ body {
 .stats-info {
   font-size: 1.4rem;
 }
-.about-product{
+.about-product {
   font-size: 1.4rem;
 }
-.about-product ul{
+.about-product ul {
   padding-left: 1.3rem;
 }
-.about-product ul li{
+.about-product ul li {
   margin-bottom: 1rem;
-  list-style-type:disc;
+  list-style-type: disc;
 }
-
 
 /*-------------------PRODUCT-CARD-----------------------*/
 .product-card {
@@ -357,16 +354,16 @@ body {
   border: var(--primary-border);
   border-radius: 1rem;
 }
-.stock{
+.stock {
   color: green;
   font-weight: 600;
   font-size: 1.8rem;
 }
-.quantity select{
+.quantity select {
   width: 100%;
   text-align: start;
 }
-.package-details{
+.package-details {
   display: flex;
   gap: 0.5rem;
   width: 100%;
@@ -377,15 +374,15 @@ body {
   display: flex;
   gap: 0.5rem;
   width: 100%;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 .package-details td:first-child {
-  width: 7rem; 
+  width: 7rem;
 }
 .package-details td:last-child {
-  flex: 1; 
+  flex: 1;
 }
-.add-gift{
+.add-gift {
   font-size: 1.4rem;
   width: 100%;
   height: 7.5%;
@@ -396,7 +393,7 @@ body {
   gap: 1rem;
 }
 /*--------------- FOOTER -------------------------------------- */
-.footer{
+.footer {
   height: 30rem;
   padding-left: 5rem;
   padding-top: 1.8rem;
@@ -404,17 +401,13 @@ body {
   flex-direction: column;
   gap: 1rem;
 }
-.cards-footer{
+.cards-footer {
   display: flex;
 }
-.plus-icon{
+.plus-icon {
   height: 100%;
   width: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-
-
-
