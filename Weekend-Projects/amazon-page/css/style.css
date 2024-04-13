@@ -7,7 +7,6 @@ body {
   height: 25.15%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 5rem;
   /* overflow: hidden; */
 }
 /* --- User-Bar ---*/
@@ -215,24 +214,63 @@ body {
   color: var(--secondary-header-font-color);
   text-decoration: line-through;
 }
-/*---------------------------------------------*/
+/*-------------------BACK-BAR--------------------------*/
+.back-bar {
+  height: 7%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+}
+.back-bar a {
+  color: #232f3e;
+  position: relative;
+}
+.back-bar a:hover {
+  text-decoration: underline;
+}
+.back-bar a::before {
+  content: url(../svgs/back-arrow.svg);
+  position: absolute;
+  left: -1rem;
+}
 /*----------------MAIN-----------------------------*/
 .main-container {
-  height: 100vh;
+  height: 96rem;
   display: grid;
   grid-template-rows: repeat(14, 1fr);
   grid-template-columns: repeat(7, 1fr);
   gap: 1rem;
+  position: relative;
 }
-.item-img-container {
+.product-img-container {
   grid-area: item-image;
   border: 1px solid black;
   grid-row: span 14;
   grid-column: span 3;
 }
-.item-content-container {
+.product-content-container {
   grid-area: item-content;
   border: 1px solid black;
   grid-row: span 14;
   grid-column: span 4;
+}
+/*-------------PRODUCT-IMAGES--------------------------------*/
+.product-img-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.product-img-angles {
+  
+  padding-top: 3rem;
+}
+.angles-container{
+  border: blue 1px solid;
+}
+.product-img-showcase {
+  max-width: 54.6rem;
+  max-height: 45.6rem;
+  position: sticky;
+  top: 0;
 }
