@@ -16,7 +16,7 @@ The project focuses on recreating the visual appearance and layout of an Amazon 
 
 ## Demo with Netlify
 
-[View Demo](#) 
+[View Demo](https://dyz-amazon-page.netlify.app)
 
 ## Installation
 
