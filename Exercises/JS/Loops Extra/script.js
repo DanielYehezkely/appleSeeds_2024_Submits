@@ -2,7 +2,7 @@
 
 /*Use a loop to iterate over the movie objects, when you find the movie with the
 specified name, use another loop to calculate the sum of all ratings and then divide by the
-number of ratings */ 
+number of ratings */
 
 const movies1 = [
     { name: 'Movie 1', ratings: [5, 6, 7] },
@@ -42,8 +42,8 @@ const highestRatedMovie = (movieObjs) => {
         const movie = movieObjs[i];
         const averageRating = calculateAverageRating(movieObjs, movie.name)
         if (averageRating > highestRating) {
-            highestRating = averageRating 
-            highestRatedMovie = movie   
+            highestRating = averageRating
+            highestRatedMovie = movie
         }
     }
     return highestRatedMovie
@@ -71,20 +71,58 @@ const mostRatedMovie = (movieObjs) => {
             mostRatedMovie = movie;
         }
     }
-    return mostRatedMovie 
+    return mostRatedMovie
 }
 console.log(mostRatedMovie(movies3));
 
 // 4. Remove Lowest Rating
+/*Use a loop to iterate over the movie objects, when you find the movie with the
+specified name, use another loop to find and remove the lowest rating*/
 const movies4 = [
     { name: 'Movie 1', ratings: [5, 6, 7] },
     { name: 'Movie 2', ratings: [8, 9, 9] },
 ];
 const movieName4 = 'Movie 1';
+const removingLowestRating = (movieObjs, movieName) => {
+    for (let i = 0; i < movieObjs.length; i++) {
+        const movie = movieObjs[i];
+        if (movie.name === movieName) {
+            const ratings = movie.ratings
+            let lowestRate = ratings[0];
+            for (let j = 0; j < ratings.length; j++) { // can solve all this with Math.min and spread (...)
+                if (lowestRate > ratings[j]) {
+                    lowestRate = ratings[j]
+                }
+            }
+            return lowestRate
+        }
+    }
+}
+console.log(removingLowestRating(movies4, movieName4));
 
 // 5. Movie Rating Histogram
+/* Use a loop to iterate over the movie objects, when you find the movie with the
+specified name, use another loop to build the histogram*/
 const movies5 = [
     { name: 'Movie 1', ratings: [5, 6, 7, 7] },
     { name: 'Movie 2', ratings: [8, 9, 9] },
 ];
 const movieName5 = 'Movie 1';
+const histograming = (movieObjs, movieName) => {
+    let histogram = {};
+    for (let i = 0; i < movieObjs.length; i++) {
+        const movie = movieObjs[i];
+        if (movie.name === movieName) {
+            const ratings = movie.ratings
+            for (let j = 0; j < ratings.length; j++) {   // can solve it much better with foreach() method
+                if (histogram[ratings[j]]) {
+                    histogram[ratings[j]] += 1
+                } else {
+                    histogram[ratings[j]] = 1
+                }
+            }
+        }
+    }
+    return histogram;
+}
+console.log(histograming(movies5, movieName5));
