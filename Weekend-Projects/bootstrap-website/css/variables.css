@@ -1,0 +1,5 @@
+@import url(./clash-display.css);
+
+:root {
+  --font-base: "ClashDisplay", sans-serif;
+}
