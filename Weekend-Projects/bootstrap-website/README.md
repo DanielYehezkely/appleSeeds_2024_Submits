@@ -17,7 +17,7 @@ The project focuses on building a new website from scratch using Bootstrap for l
 
 ## Demo with Netlify
 
-[Netlify-link](https://your-demo-link.netlify.app)
+[Netlify-link](https://dyz-bootstrap-scss-website.netlify.app/)
 
 ## Installation
 
