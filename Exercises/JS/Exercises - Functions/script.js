@@ -94,4 +94,70 @@ function calculateAverageRating(arrayOfRatings) {
     }
     return sum / arrayOfRatings.length
 }
-calculateAverageRating([3, 4, 5, 3, 5])
+const averageRating = calculateAverageRating([3, 4, 5, 3, 5])
+console.log(averageRating);
+
+// 2. Filter Movies by Rating
+// Example input: ([3, 4, 5, 2, 1, 5], 4)
+function filterByRating(arrayOfRatings, minRatingValue) {
+    let minRateArray = []
+    for (const rate of arrayOfRatings) {
+        if (rate >= minRatingValue) {
+            minRateArray.push(rate)
+        }
+    }
+    return minRateArray
+}
+const filteredArr = filterByRating([3, 4, 5, 2, 1, 5], 4);
+console.log(filteredArr);
+
+// 3. Highest Rated Movie
+// Example input: [3, 4, 5, 3, 5]
+function findHighestRating(arrayOfRatings) {
+    let highestRate = arrayOfRatings[0];
+    for (const rate of arrayOfRatings) {
+        if (highestRate < rate ) {
+            highestRate = rate
+        }
+    }
+    return highestRate
+}
+const highestRate = findHighestRating([8, 1, 5, 22, 5])
+console.log(highestRate);
+
+// 4. Ratings Above Threshold
+// Example input: ([3, 4, 5, 2, 1, 5], 3)
+function ratingAboveThreshold(arrayOfRatings, threshold) {
+    let thresholdArr = []
+    for (const rate of arrayOfRatings) {
+        if (rate > threshold) {
+            thresholdArr.push(rate)
+        }
+    }
+    return thresholdArr
+}
+console.log(ratingAboveThreshold([3, 4, 5, 2, 1, 5], 3)); 
+
+// 5. Count Movies in Rating Range
+// Example input: ([3, 4, 5, 2, 1, 5], 4, 5)
+function countInRatingRange(arrayOfRatings, lower, higher) {
+    let count = 0;
+    for (const rate of arrayOfRatings) {
+        if (rate >= lower && rate <= higher) {
+            count++;
+        }
+    }
+    return count
+}
+console.log(countInRatingRange([3, 4, 5, 2, 1, 5], 4, 5));
+
+// 6. Filter Unique Ratings
+// Example input: [5, 3, 4, 3, 5, 4, 5]
+function uniqueRatings(arrayOfRatings) {
+    for (const rate of arrayOfRatings) {
+        if () {
+           
+        }
+    }
+}
+
