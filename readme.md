@@ -8,7 +8,7 @@
 
 - [Weekend Projects](https://github.com/DanielYehezkely/appleSeeds_2024_Submits/tree/main/Weekend-Projects)
 
-- [Code Along](https://github.com/DanielYehezkely/appleSeeds_2024_Submits/tree/main/CodeAlongs)
+- [Mini Projects](https://github.com/DanielYehezkely/appleSeeds_2024_Submits/tree/main/Mini-Projects)
 
 
 ![appleseeds](FrontEnd.jpg)
