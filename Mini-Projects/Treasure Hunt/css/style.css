@@ -1,0 +1,27 @@
+.global-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container {
+  height: 70%;
+  width: 20%;
+}
+
+#grid-container {
+  width: 100%;
+  height: 55.7%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  row-gap: 0.5rem;
+  column-gap: 0.4rem;
+}
+
+.grid-item {
+  border: 1px solid black;
+  background-color: #f6f4f4;
+  width: 100%;
+  height: 100%;
+}
