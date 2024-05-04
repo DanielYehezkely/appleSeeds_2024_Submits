@@ -342,14 +342,46 @@ console.log(isIsogram("moOse"));
 console.log('----------------------------Advanced iteration logic -------------------------------');
 console.log('----------------------------Question 7 - implement Js methods -------------------------------');
 // Filter -
+const arr = [1, 2, 3, 4]
 const Filter = (arr) => {
     const filterArr = [];
     for (const item of arr) {
-        if (item > 0) { // Some condition
+        if (item > 1) { // Some condition
             filterArr.push(item);
         }
     }
     return filterArr;
 };
 
-console.log(Filter([1, 2, 3, 4]))
+console.log(Filter(arr));
+
+// Foreach
+const foreach = (arr) => {
+    for (let item of arr) {
+        item ++;
+        console.log(item);
+    }
+    return arr
+}
+console.log(foreach(arr));
+console.log(arr);
+
+// map 
+const map = (arr) => {
+    const mappedArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        mappedArr.push(arr[i] + 1);
+    }
+    return mappedArr;
+}
+
+console.log(map(arr));
+
+console.log('----------------------------Question 8 - find the parameter of rectangle -------------------------------');
+const findPerimeter = (length, width) => 2*(length+width);
+console.log(findPerimeter(2,9));
+console.log(findPerimeter(20,10));
+
+
+
+
