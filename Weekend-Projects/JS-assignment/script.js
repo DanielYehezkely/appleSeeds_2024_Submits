@@ -339,7 +339,7 @@ console.log(isIsogram("Dermatoglyphics"));
 console.log(isIsogram("aba"));
 console.log(isIsogram("moOse"));
 
-console.log('----------------------------Advanced iteration logic -------------------------------');
+console.log('----------------------------Implement Functionality -------------------------------');
 console.log('----------------------------Question 7 - implement Js methods -------------------------------');
 // Filter -
 const arr = [1, 2, 3, 4]
