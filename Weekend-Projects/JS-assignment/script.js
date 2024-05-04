@@ -124,12 +124,12 @@ const nb_year = (pO, precent, aug, p) => {
     // 1. check if the parameters are valid according to the demands
     if (typeof aug !== 'number' || p <= 0 || pO <= 0 || (precent !== null && precent < 0)) {
         return "Invalid Input - Please insert valid numbers";
-    } 
+    }
     // 3.assign variable for counting every year 
     let years = 0
     // 2. make a loop that checks if p is smaller then pO
     while (pO < p) {
-        years ++ ;
+        years++;
         pO += (pO * (precent / 100)) + aug; // 4. add the inhabitants that move to the city every iteration(year) also add the precentage of people joining the city every year
     }
     return years // 5.return the years it counts to get 
@@ -206,14 +206,14 @@ console.log(tribonacci([9, 17, 31], 12));
 console.log('----------------------------Basic iteration logic -------------------------------');
 console.log('----------------------------Question 5.1 - trimming string -------------------------------');
 
-const trimString = (str) =>  str.slice(1, str.length -1);
+const trimString = (str) => str.slice(1, str.length - 1);
 console.log(trimString("Java"));
 console.log(trimString("JavaScript"));
 
 console.log('----------------------------Question 5.2 - string repeat -------------------------------');
 const repeat_str = (count, str) => str.repeat(count);
-console.log(repeat_str(5,"Hi"));
-console.log(repeat_str(3,"World"));
+console.log(repeat_str(5, "Hi"));
+console.log(repeat_str(3, "World"));
 
 console.log('----------------------------Question 5.3 - To camel case -------------------------------');
 const toCamelCase = (str) => str.replace(/[-_](.)/g, (_, char) => char.toUpperCase()); // the regex here is capturing the char after the macthed regex dash and underscore, the _ used for placeholder convention.
@@ -222,10 +222,10 @@ console.log(toCamelCase("is_good-function"));
 
 console.log('----------------------------Question 5.4 - To weird case -------------------------------');
 const toWeirdCase = (str) => {
-    return str.split('').map((char,index) => {
+    return str.split('').map((char, index) => {
         return index % 2 === 0 ? char.toUpperCase() : char.toLowerCase();
     }).join('')
-     
+
 }
 
 console.log(toWeirdCase("String"));
@@ -234,7 +234,7 @@ console.log(toWeirdCase("Weird string case"));
 console.log('----------------------------Question 5.5 - Abbreviate two words -------------------------------');
 const abbreviateTwoWords = (str) => {
     return str.split(' ').map(word => word[0].toUpperCase()).join('.')
-    
+
 }
 console.log(abbreviateTwoWords("daniel yehezkely"));
 console.log(abbreviateTwoWords("Sam Harris"));
@@ -261,3 +261,95 @@ const getShortestWord = (str) => {
 
 console.log(getShortestWord("Th1s Task Is Pretty Fun"));
 console.log(getShortestWord("enjoying javascript full time"));
+
+console.log('----------------------------Question 5.8 - shortest words 2 -------------------------------');
+const getLongestWord = (str) => {
+    return str.split(' ').reduce((maxLength, word) => {
+        const length = word.length;
+        if (length > maxLength || maxLength === 0) {
+            maxLength = length;
+        }
+        return maxLength;
+    }, 0);
+}
+
+console.log(getLongestWord("Th1s Task Is Pretty Fun"));
+console.log(getLongestWord("enjoying javascript full time"));
+
+console.log('----------------------------Advanced iteration logic -------------------------------');
+console.log('----------------------------Question 6.1 - Mumbling -------------------------------');
+
+const accum = (str) => !/^[a-zA-Z]+$/.test(str) ?
+    `Invalid String - this function accepts only letters form a-z (also capitalized)` :
+    str.split('').map((char, index) =>
+        char.toUpperCase() + char.toLowerCase().repeat(index)).join('-')
+
+console.log(accum("abcd"));
+console.log(accum("aabbcde"));
+
+console.log('----------------------------Question 6.2 - Counting Duplicates -------------------------------');
+
+const countDuplicates = (str) => {
+    const frequencies = str.split('').reduce((obj, char) => {
+        obj[char] ? obj[char]++ : obj[char] = 1
+        return obj
+    }, {})
+
+    let highestFreq = 0;
+    let charsWithHighestFreq = [];
+
+    for (const char in frequencies) {
+        if (frequencies[char] > highestFreq) {
+            highestFreq = frequencies[char];
+            charsWithHighestFreq = [char];
+        } else if (frequencies[char] === highestFreq) {
+            charsWithHighestFreq.push(char);
+        }
+    }
+    return `Highest frequency: ${highestFreq} - ${charsWithHighestFreq.join(', ')} shows ${highestFreq} times.`
+}
+
+console.log(countDuplicates("aabbcde"));
+console.log(countDuplicates("aabbcdekjnsdfffenjscddas"));
+
+console.log('----------------------------Question 6.3 - organize strings -------------------------------');
+const a = "xyaabbbccccdefww"
+const b = "xxxxyyyyabklmopq"
+const longestStr = (s1, s2) => {
+    if (!/^[a-z]+$/.test(s1 + s2)) {
+        return "only letters from a-z";
+    }
+    return [...new Set([...s1, ...s2])].sort().join('');
+};
+
+console.log(longestStr(a, b));
+
+console.log('----------------------------Question 6.4 - isogram -------------------------------');
+const isIsogram = (str) => {
+    const frequencies = {};
+    for (const char of str.toLowerCase()) {
+        if (frequencies[char]) {
+            return false;
+        }
+        frequencies[char] = true;
+    }
+    return true;
+};
+console.log(isIsogram("Dermatoglyphics"));
+console.log(isIsogram("aba"));
+console.log(isIsogram("moOse"));
+
+console.log('----------------------------Advanced iteration logic -------------------------------');
+console.log('----------------------------Question 7 - implement Js methods -------------------------------');
+// Filter -
+const Filter = (arr) => {
+    const filterArr = [];
+    for (const item of arr) {
+        if (item > 0) { // Some condition
+            filterArr.push(item);
+        }
+    }
+    return filterArr;
+};
+
+console.log(Filter([1, 2, 3, 4]))
