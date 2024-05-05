@@ -3,7 +3,6 @@
 This repository contains a collection of JavaScript exercises covering a variety of topics. Each exercise is designed to help you practice and improve your JavaScript skills.
 
 
-
 ## Exercises Overview
 
 - **Advanced Iteration Logic**: Practice advanced iteration techniques such as string manipulation and counting duplicates.
