@@ -660,7 +660,8 @@ class CarAgencyManager {
   addCarToAgency(agencyId, car) {
     const agency = this._findAgencyById(agencyId);
     if (agency) {
-      agency.cars.push(car);
+      const updatedAgency = { ...agency };
+      updatedAgency.cars = [...updatedAgency.cars, car];
       return true;
     }
     return false;
@@ -671,8 +672,9 @@ class CarAgencyManager {
     if (agency) {
       const carInfo = this._findCarByCarNumber(agency, carNumber);
       if (carInfo) {
-        agency.cars[carInfo.carIndex].models.splice(carInfo.modelIndex, 1);
-        return true;
+        const updatedAgency = { ...agency };
+        updatedAgency.cars[carInfo.carIndex].models.splice(carInfo.modelIndex, 1);
+        return true
       }
     }
     return false;
@@ -701,34 +703,54 @@ class CarAgencyManager {
   updateCarPrice(agencyId, carNumber, newPrice) {
     const agency = this._findAgencyById(agencyId);
     if (agency) {
-      const carInfo = this._findCarByCarNumber(agency, carNumber);
+      const updatedAgency = JSON.parse(JSON.stringify(agency));
+      const carInfo = this._findCarByCarNumber(updatedAgency, carNumber);
       if (carInfo) {
-        carInfo.model.price = newPrice;
-        return true
+        carInfo.model.price = newPrice
+        return true;
       }
     }
-    return false
+    return false;
   }
 
   getTotalAgencyRevenue(agencyId) {
     const agency = this._findAgencyById(agencyId);
     let totalRevenue = 0;
-        for (const car of agency.cars) {
-          if (car.models) {
-            for (const model of car.models) {
-              totalRevenue += model.price
-            }
-          }
+    for (const car of agency.cars) {
+      if (car.models) {
+        for (const model of car.models) {
+          totalRevenue += model.price
         }
-        return totalRevenue 
-   }
+      }
+    }
+    return totalRevenue
+  }
 
-  // Transfer a car from one agency to another.
-  // @param {string} fromAgencyId - The ID of the agency from where the car will be transferred
-  // @param {string} toAgencyId - The ID of the agency to where the car will be transferred
-  // @param {string} carId - The ID of the car to be transferred
-  // @return {boolean} - true if transferred successfully, false otherwise
-  transferCarBetweenAgencies(fromAgencyId, toAgencyId, carId) { }
+  transferCarBetweenAgencies(fromAgencyId, toAgencyId, carNumber) {
+    const fromAgency = this._findAgencyById(fromAgencyId);
+    const toAgency = this._findAgencyById(toAgencyId);
+
+    if (fromAgency && toAgency) {
+      const updatedFromAgency = JSON.parse(JSON.stringify(fromAgency));
+      const updatedToAgency = JSON.parse(JSON.stringify(toAgency));
+
+      const carInfo = this._findCarByCarNumber(updatedFromAgency, carNumber);
+      if (carInfo) {
+        const carToTransfer = carInfo.model;
+        updatedFromAgency.cars = updatedFromAgency.cars.map(car => ({
+          ...car,
+          models: car.models.filter(model => model.carNumber !== carNumber)
+        }));
+
+        const destinationCar = updatedToAgency.cars.find(car => car.brand === carToTransfer.brand);
+        if (destinationCar) {
+          destinationCar.models.push(carToTransfer);
+        } 
+        return true;
+      }
+    }
+    return false;
+  }
 }
 
 class CustomerManager {
@@ -844,8 +866,8 @@ console.log('Update Car Price Non-existent: ', carAgencyManager.updateCarPrice('
 console.log('Total Agency Revenue: ', carAgencyManager.getTotalAgencyRevenue('Plyq5M5AZ'));
 
 // // Test transferCarBetweenAgencies
-// console.log('Transfer Car Between Agencies: ', carAgencyManager.transferCarBetweenAgencies('Plyq5M5AZ', '26_IPfHU1', 'AZJZ4'));
-// console.log('Transfer Car Between Agencies (Non-existent): ', carAgencyManager.transferCarBetweenAgencies('NonExistent', '26_IPfHU1', 'AZJZ4'));
+console.log('Transfer Car Between Agencies: ', carAgencyManager.transferCarBetweenAgencies('Plyq5M5AZ', '26_IPfHU1', '6rvXw'));
+console.log('Transfer Car Between Agencies (Non-existent): ', carAgencyManager.transferCarBetweenAgencies('NonExistent', '26_IPfHU1', 'AZJZ4'));
 
 // // Customer Manager Tests
 // const customerManager = new CustomerManager(customers);
