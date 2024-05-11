@@ -645,12 +645,7 @@ class CarAgencyManager {
   }
 
   searchAgency(idOrName) {
-    for (const agency of this.agencies) {
-      if (agency.agencyName === idOrName || agency.agencyId === idOrName) {
-        return agency
-      }
-    }
-    return null
+    return this.agencies.find(agency => agency.agencyName === idOrName || agency.agencyId === idOrName) || null;
   }
 
   getAllAgencies() {
@@ -686,11 +681,11 @@ class CarAgencyManager {
       if (cashOrCredit >= 0) {
         agency.cash += cashOrCredit;
       } else {
-        const absoluteCashOrCredit = Math.abs(cashOrCredit);
-        if (agency.cash >= absoluteCashOrCredit) {
-          agency.cash -= absoluteCashOrCredit;
+        const totalCashOrCredit = Math.abs(cashOrCredit);
+        if (agency.cash >= totalCashOrCredit) {
+          agency.cash -= totalCashOrCredit;
         } else {
-          const remainingCredit = absoluteCashOrCredit - agency.cash;
+          const remainingCredit = totalCashOrCredit - agency.cash;
           agency.cash = 0;
           agency.credit -= remainingCredit;
         }
@@ -758,25 +753,35 @@ class CustomerManager {
     this.customers = customers;
   }
 
-  // Search for a customer by their name or ID.
-  // @param {string} idOrName - ID or name of the customer
-  // @return {object} - customer object if found, otherwise null
-  searchCustomer(idOrName) { }
+  searchCustomer(idOrName) { 
+      return this.customers.find(customer => customer.name === idOrName || customer.id === idOrName) || null;
+  }
 
-  // Retrieve all customers' names.
-  // @return {string[]} - Array of customer names
-  getAllCustomers() { }
+  getAllCustomers() {
+    return this.customers.map(customer => customer.name)
+   }
 
-  // Change the cash of a customer.
-  // @param {string} customerId - The ID of the customer
-  // @param {number} cash - The new cash value
-  // @return {boolean} - true if updated successfully, false otherwise
-  changeCustomerCash(customerId, cash) { }
+  _findCustomerById(customerId) {
+    return this.customers.find(customer => customer.id === customerId) || null;
+  }
 
-  // Calculate the total value of all cars owned by a specific customer.
-  // @param {string} customerId - The ID of the customer
-  // @return {number} - The total value of cars owned by the customer
-  getCustomerTotalCarValue(customerId) { }
+  changeCustomerCash(customerId, cash) {
+    const customer = this._findCustomerById(customerId);
+    if (customer) {
+      customer.cash = cash;
+      return true;
+    } else {
+      return null;
+    }
+  }
+
+  getCustomerTotalCarValue(customerId) {
+    const customer = this._findCustomerById(customerId);
+    if (customer) {
+      return customer.cars.reduce((totalValue, car) => totalValue + car.price,0)
+    }
+    return `Customer Not Found`
+   }
 }
 
 class CarManager {
@@ -784,9 +789,14 @@ class CarManager {
     this.agencies = agencies;
   }
 
-  // Retrieve all cars available for purchase.
-  // @return {object[]} - Array of cars
-  getAllCars() { }
+  getAllCars() {
+    return this.agencies.reduce((arrayOfCars, agency) => {
+      agency.cars.forEach(car => {
+        arrayOfCars.push(...car.models);
+      });
+      return arrayOfCars;
+    }, []);
+  }
 
   // Search for cars based on certain criteria.
   // @param {number} year - The production year of the car
@@ -870,29 +880,29 @@ console.log('Transfer Car Between Agencies: ', carAgencyManager.transferCarBetwe
 console.log('Transfer Car Between Agencies (Non-existent): ', carAgencyManager.transferCarBetweenAgencies('NonExistent', '26_IPfHU1', 'AZJZ4'));
 
 // // Customer Manager Tests
-// const customerManager = new CustomerManager(customers);
+const customerManager = new CustomerManager(customers);
 
 // // Test searchCustomer
-// console.log('Search Customer by ID: ', customerManager.searchCustomer('BGzHhjnE8'));
-// console.log('Search Customer by Name: ', customerManager.searchCustomer('Lilah Goulding'));
-// console.log('Search Customer Non-existent: ', customerManager.searchCustomer('NonExistent'));
+console.log('Search Customer by ID: ', customerManager.searchCustomer('BGzHhjnE8'));
+console.log('Search Customer by Name: ', customerManager.searchCustomer('Lilah Goulding'));
+console.log('Search Customer Non-existent: ', customerManager.searchCustomer('NonExistent'));
 
 // // Test getAllCustomers
-// console.log('All Customers: ', customerManager.getAllCustomers());
+console.log('All Customers: ', customerManager.getAllCustomers());
 
 // // Test changeCustomerCash
-// console.log('Change Customer Cash: ', customerManager.changeCustomerCash('BGzHhjnE8', 50000));
-// console.log('Change Customer Cash Non-existent: ', customerManager.changeCustomerCash('NonExistent', 50000));
+console.log('Change Customer Cash: ', customerManager.changeCustomerCash('BGzHhjnE8', 50000));
+console.log('Change Customer Cash Non-existent: ', customerManager.changeCustomerCash('NonExistent', 50000));
 
 // // Test getCustomerTotalCarValue
-// console.log('Customer Total Car Value: ', customerManager.getCustomerTotalCarValue('BGzHhjnE8'));
-// console.log('Customer Total Car Value Non-existent: ', customerManager.getCustomerTotalCarValue('NonExistent'));
+console.log('Customer Total Car Value: ', customerManager.getCustomerTotalCarValue('BGzHhjnE8'));
+console.log('Customer Total Car Value Non-existent: ', customerManager.getCustomerTotalCarValue('NonExistent'));
 
 // // Car Manager Tests
-// const carManager = new CarManager(agencies);
+const carManager = new CarManager(agencies);
 
 // // Test getAllCars
-// console.log('All Cars: ', carManager.getAllCars());
+console.log('All Cars: ', carManager.getAllCars());
 
 // // Test searchCars
 // console.log('Search Cars: ', carManager.searchCars(2020, 500000, 'bmw'));
