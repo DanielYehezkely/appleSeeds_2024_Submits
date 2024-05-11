@@ -740,7 +740,7 @@ class CarAgencyManager {
         const destinationCar = updatedToAgency.cars.find(car => car.brand === carToTransfer.brand);
         if (destinationCar) {
           destinationCar.models.push(carToTransfer);
-        } 
+        }
         return true;
       }
     }
@@ -753,13 +753,13 @@ class CustomerManager {
     this.customers = customers;
   }
 
-  searchCustomer(idOrName) { 
-      return this.customers.find(customer => customer.name === idOrName || customer.id === idOrName) || null;
+  searchCustomer(idOrName) {
+    return this.customers.find(customer => customer.name === idOrName || customer.id === idOrName) || null;
   }
 
   getAllCustomers() {
     return this.customers.map(customer => customer.name)
-   }
+  }
 
   _findCustomerById(customerId) {
     return this.customers.find(customer => customer.id === customerId) || null;
@@ -778,10 +778,10 @@ class CustomerManager {
   getCustomerTotalCarValue(customerId) {
     const customer = this._findCustomerById(customerId);
     if (customer) {
-      return customer.cars.reduce((totalValue, car) => totalValue + car.price,0)
+      return customer.cars.reduce((totalValue, car) => totalValue + car.price, 0)
     }
     return `Customer Not Found`
-   }
+  }
 }
 
 class CarManager {
@@ -798,24 +798,40 @@ class CarManager {
     }, []);
   }
 
-  // Search for cars based on certain criteria.
-  // @param {number} year - The production year of the car
-  // @param {number} price - The price of the car
-  // @param {string} brand - The brand of the car
-  // @return {object[]} - Array of cars that meet the criteria
-  searchCars(year, price, brand) { }
+  searchCars(year, price, brand) {
+    if (year && price && brand) {
+      return this.agencies.reduce((arrayOfCars, agency) => {
+        agency.cars.forEach(car => {
+          if (car.brand === brand) {
+            car.models.forEach(model => {
+              if (model.year === year && model.price === price) {
+                arrayOfCars.push(model);
+              }
+            });
+          }
+        });
+        return arrayOfCars;
+      }, []);
+    }
+    return undefined
 
-  // Return the most expensive car available for sale.
-  // @return {object} - The most expensive car
-  getMostExpensiveCar() { }
+  }
 
-  // Return the cheapest car available for sale.
-  // @return {object} - The cheapest car
-  getCheapestCar() { }
+  getMostExpensiveCar() {
+    const allCars = this.getAllCars();
+    return allCars.reduce((acc, car) => acc < car.price ? car.price : acc, allCars[0].price);
+  }
+
+  getCheapestCar() {
+    const allCars = this.getAllCars();
+    return allCars.reduce((acc, car) => acc > car.price ? car.price : acc, allCars[0].price);
+  }
 }
 
 class CarPurchaseManager {
   constructor(agencies, customers) {
+    this.copyCarManager = new CarAgencyManager(agencies);
+    this.copyCustomerManager = new CustomerManager(customers);
     this.agencies = agencies;
     this.customers = customers;
     this.taxesAuthority = {
@@ -824,16 +840,57 @@ class CarPurchaseManager {
       numberOfTransactions: 0,
     };
   }
+  _findAgencyByCarNumber(carNumber) {
+    for (const agency of this.agencies) {
+      for (const car of agency.cars) {
+        for (const model of car.models) {
+          if (model.carNumber === carNumber) {
+            return agency;
+          }
+        }
+      }
+    }
+    return null; 
+  }
 
-  // Sell a car to a specific customer.
-  // @param {string} carId - The ID of the car
-  // @param {string} customerId - The ID of the customer
-  // @return {boolean} - true if the car was sold successfully, false otherwise
-  sellCar(carId, customerId) { }
+ 
+  sellCar(carNumber, customerId) {
+    const agency = this._findAgencyByCarNumber(carNumber);
+    if (!agency) {
+      return 'The vehicle does not exist at the agency.';
+    }
+    const car = this.copyCarManager._findCarByCarNumber(agency, carNumber);
+    const customer = this.copyCustomerManager._findCustomerById(customerId);
+    if (!customer) {
+      return 'not found'
+    }
+    if (!car || !customer) {
+      return 'Car or customer not found.';
+    }
+    const totalPriceWithTax = car.model.price * 1.17; 
+    if (totalPriceWithTax > customer.cash) {
+      return 'The customer does not have enough money.';
+    }
+    customer.cash -= totalPriceWithTax;
+    car.model.ownerId = customer.id;
+    customer.cars.push(car.model);
+    agency.cash += car.model.price;
+    this.copyCarManager.removeCarFromAgency(agency.agencyId, carNumber);
+    this.taxesAuthority.totalTaxesPaid += car.model.price * 0.17;
+    this.taxesAuthority.sumOfAllTransactions += totalPriceWithTax;
+    this.taxesAuthority.numberOfTransactions++;
+    return 'Car sold successfully.';
+  }
 
-  // Calculate and return the total revenue of the entire market.
-  // @return {number} - The total revenue of the market
-  getTotalMarketRevenue() { }
+  
+  getTotalMarketRevenue() {
+    let totalRevenue = 0;
+    for (const agency of this.agencies) {
+      totalRevenue += this.copyCarManager.getTotalAgencyRevenue(agency.agencyId);
+    }
+    return totalRevenue;
+  }
+
 }
 
 // Car Agency Manager Tests
@@ -905,22 +962,22 @@ const carManager = new CarManager(agencies);
 console.log('All Cars: ', carManager.getAllCars());
 
 // // Test searchCars
-// console.log('Search Cars: ', carManager.searchCars(2020, 500000, 'bmw'));
-// console.log('Search Cars (No Brand): ', carManager.searchCars(2020, 500000));
+console.log('Search Cars: ', carManager.searchCars(2020, 500000, 'bmw')); // no macthes
+console.log('Search Cars (No Brand): ', carManager.searchCars(2020, 500000));
 
 // // Test getMostExpensiveCar
-// console.log('Most Expensive Car: ', carManager.getMostExpensiveCar());
+console.log('Most Expensive Car: ', carManager.getMostExpensiveCar());
 
 // // Test getCheapestCar
-// console.log('Cheapest Car: ', carManager.getCheapestCar());
+console.log('Cheapest Car: ', carManager.getCheapestCar());
 
 // // Car Purchase Manager Tests
-// const carPurchaseManager = new CarPurchaseManager(agencies, customers);
+const carPurchaseManager = new CarPurchaseManager(agencies, customers);
 
 // // Test sellCar
-// console.log('Sell Car: ', carPurchaseManager.sellCar('AZJZ4', 'BGzHhjnE8'));
-// console.log('Sell Car (Non-existent): ', carPurchaseManager.sellCar('NonExistent', 'BGzHhjnE8'));
-// console.log('Sell Car (Insufficient Funds): ', carPurchaseManager.sellCar('AZJZ4', 'Wm6BkA1F0'));
+console.log('Sell Car: ', carPurchaseManager.sellCar('AZJZ4', 'BGzHhjnE8'));
+console.log('Sell Car (Non-existent): ', carPurchaseManager.sellCar('NonExistent', 'BGzHhjnE8'));
+console.log('Sell Car (Insufficient Funds): ', carPurchaseManager.sellCar('AZJZ4', 'Wm6BkA1F0'));
 
-// // Test getTotalMarketRevenue
-// console.log('Total Market Revenue: ', carPurchaseManager.getTotalMarketRevenue());
+// Test getTotalMarketRevenue
+console.log('Total Market Revenue: ', carPurchaseManager.getTotalMarketRevenue());
