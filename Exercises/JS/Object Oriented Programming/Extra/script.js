@@ -7,17 +7,17 @@ class Movie {
     #ratings
 
     constructor(title, releaseYear, genre) {
-        this.#title = title
-        this.#releaseYear = releaseYear
-        this.#genre = genre
+        this.title = title
+        this.releaseYear = releaseYear
+        this.genre = genre
         this.#ratings = []
     }
 
-    get getTitle() {
+    get title() {
         return this.#title
     }
 
-    set setTitle(newTitle) {
+    set title(newTitle) {
         if (typeof newTitle === 'string' || newTitle.length > 1 && newTitle.length < 100) {
             this.#title = newTitle;
         } else {
@@ -25,11 +25,11 @@ class Movie {
         }
     }
 
-    get getYear() {
+    get year() {
         return this.#releaseYear
     }
 
-    set setYear(newYear) {
+    set year(newYear) {
         const currentDate = new Date();
         const currentYear = currentDate.getFullYear();
         if (newYear > 1900 && newYear <= currentYear) {
@@ -39,11 +39,11 @@ class Movie {
         }
     }
 
-    get getGenre() {
+    get genre() {
         return this.#genre
     }
 
-    set setGenre(newGenre) {
+    set genre(newGenre) {
         if (typeof newGenre === 'string' && newGenre.trim().length > 0) {
             this.#genre = newGenre.trim();
         } else {
@@ -64,10 +64,10 @@ class Movie {
     }
 
     displayDetails() {
-        console.log(`Movie Details - Title: ${this.#title}, Release Year: ${this.#releaseYear}, Genre: ${this.#genre}`);
+        return `Title: ${this.#title}, Release Year: ${this.#releaseYear}, Genre: ${this.#genre}`;
     }
 
-    typeOfMovie(){
+    typeOfMovie() {
         return "This is a standard movie."
     }
 }
@@ -90,20 +90,20 @@ console.log(movie1.typeOfMovie());
 
 // Exercise 2 - inheritance - extended movie
 class Series extends Movie {
-    
+
     #numberOfEpisodes
 
-    constructor(title, releaseYear, genre, numberOfEpisodes){
-      super(title, releaseYear,genre)
-      this.#numberOfEpisodes = numberOfEpisodes
+    constructor(title, releaseYear, genre, numberOfEpisodes) {
+        super(title, releaseYear, genre)
+        this.#numberOfEpisodes = numberOfEpisodes
     }
 
-    get getNumOfEpisodes(){
+    get getNumOfEpisodes() {
         return this.#numberOfEpisodes
     }
 
-    set setNumOfEpisodes(num){
-        if (typeof num !== 'number' || num <= 0 ) {
+    set setNumOfEpisodes(num) {
+        if (typeof num !== 'number' || num <= 0) {
             console.log('Number of episodes must be greater then 0.');
         } else {
             this.#numberOfEpisodes = num
@@ -111,7 +111,7 @@ class Series extends Movie {
     }
 
     displayDetails() {
-        console.log(`Movie Details - Title: ${this.getTitle}, Release Year: ${this.getYear}, Genre: ${this.getGenre}, Number of episodes: ${this.#numberOfEpisodes}`);
+        return `${super.displayDetails()}, Number of episodes: ${this.#numberOfEpisodes}`;
     }
 
     typeOfMovie() {
@@ -173,7 +173,7 @@ class Streamer {
     #media
     static #streamerInstance
 
-    constructor(){
+    constructor() {
         this.#media = []
         if (Streamer.#streamerInstance) {
             return Streamer.#streamerInstance
@@ -181,22 +181,22 @@ class Streamer {
         Streamer.#streamerInstance = this
     }
 
-    static getStreamerInstance(){
+    static getStreamerInstance() {
         if (!Streamer.#streamerInstance) {
             Streamer.#streamerInstance = new Streamer();
         }
         return Streamer.#streamerInstance
     }
 
-    addMedia(movie){
-      if (!(movie instanceof Movie)) {
-        console.error('Not an instance of Movie');
-      } else {
-        this.#media.push(movie)
-      }
+    addMedia(movie) {
+        if (!(movie instanceof Movie)) {
+            console.error('Not an instance of Movie');
+        } else {
+            this.#media.push(movie)
+        }
     }
 
-    findMediaByTitle(title){
+    findMediaByTitle(title) {
         return this.#media.filter(movie => movie.getTitle === title)
     }
 }
