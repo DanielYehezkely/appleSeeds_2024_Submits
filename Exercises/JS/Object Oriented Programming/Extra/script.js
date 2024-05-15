@@ -18,7 +18,7 @@ class Movie {
     }
 
     set title(newTitle) {
-        if (typeof newTitle === 'string' || newTitle.length > 1 && newTitle.length < 100) {
+        if ((typeof newTitle === 'string') && (newTitle.length > 1 && newTitle.length < 100)) {
             this.#title = newTitle;
         } else {
             console.error(`Title must be a string with length between 1 and 100 characters.`);
@@ -73,12 +73,12 @@ class Movie {
 }
 
 const movie1 = new Movie();
-movie1.setTitle = 'movie1'
-console.log(movie1.getTitle);
-movie1.setYear = 1949
-console.log(movie1.getYear);
-movie1.setGenre = 'Drama'
-console.log(movie1.getGenre);
+movie1.title = 'movie1'
+console.log(movie1.title);
+movie1.year = 1949
+console.log(movie1.year);
+movie1.genre = 'Drama'
+console.log(movie1.genre);
 movie1.addRating(4.3)
 movie1.addRating(5)
 movie1.addRating(3.8)
@@ -98,11 +98,11 @@ class Series extends Movie {
         this.#numberOfEpisodes = numberOfEpisodes
     }
 
-    get getNumOfEpisodes() {
+    get numOfEpisodes() {
         return this.#numberOfEpisodes
     }
 
-    set setNumOfEpisodes(num) {
+    set numOfEpisodes(num) {
         if (typeof num !== 'number' || num <= 0) {
             console.log('Number of episodes must be greater then 0.');
         } else {
@@ -128,11 +128,11 @@ class Documentary extends Movie {
         this.#topic = topic
     }
 
-    get getTopic() {
+    get topic() {
         return this.#topic
     }
 
-    set setTopic(topic) {
+    set topic(topic) {
         if (topic.length <= 1 || topic.length >= 50) {
             console.log('Topic length must be greater then 1 and less then 50.');
         } else {
@@ -141,7 +141,7 @@ class Documentary extends Movie {
     }
 
     displayDetails() {
-        console.log(`Movie Details - Title: ${this.getTitle}, Release Year: ${this.getYear}, Genre: ${this.getGenre}, Number of episodes: ${this.getNumOfEpisodes}, Topic: ${this.#topic}`);
+        console.log(`${super.displayDetails()}, Topic: ${this.#topic}`);
     }
 
     typeOfMovie() {
@@ -150,20 +150,20 @@ class Documentary extends Movie {
 }
 
 const series = new Series();
-series.setTitle = 'Movie1 -series'
-series.setYear = 2000
-series.setGenre = 'Drama'
-series.setNumOfEpisodes = 8
-console.log(series.getNumOfEpisodes);
+series.title = 'Movie1 -series'
+series.year = 2000
+series.genre = 'Drama'
+series.numOfEpisodes = 8
+console.log(series.numOfEpisodes);
 series.displayDetails();
 
 
 const documentary = new Documentary();
-documentary.setTitle = 'Movie1 -documentary'
-documentary.setYear = 2020
-documentary.setGenre = 'Animals'
-documentary.setNumOfEpisodes = 8
-documentary.setTopic = 'The animals kingdom in the country of Nigeria'
+documentary.title = 'Movie1 -documentary'
+documentary.year = 2020
+documentary.genre = 'Animals'
+documentary.numOfEpisodes = 8
+documentary.topic = 'The animals kingdom in the country of Nigeria'
 documentary.displayDetails();
 
 // Bonus - streaming platform 
@@ -202,18 +202,18 @@ class Streamer {
 }
 
 const movie2 = new Movie();
-movie2.setTitle = 'movie2'
-console.log(movie1.getTitle);
-movie2.setYear = 1999
-console.log(movie1.getYear);
-movie2.setGenre = 'Action'
-console.log(movie1.getGenre);
+movie2.title = 'movie2'
+console.log(movie1.title);
+movie2.year = 1999
+console.log(movie1.year);
+movie2.genre = 'Action'
+console.log(movie1.genre);
 
 const streamer = Streamer.getStreamerInstance();
 streamer.addMedia(movie1);
 streamer.addMedia(movie2);
 const moviesFound = streamer.findMediaByTitle('movie2');
 moviesFound.forEach(movie => {
-    console.log(`Title: ${movie.getTitle}, Release Year: ${movie.getYear}, Genre: ${movie.getGenre}`);
+    console.log(`Title: ${movie.Title}, Release Year: ${movie.Year}, Genre: ${movie.Genre}`);
 });
 
