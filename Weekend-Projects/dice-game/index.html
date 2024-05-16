@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rolling-Dice Game</title>
     <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/utilities.css" /> 
+    <!-- change the order after hiding -->
   </head>
   <body>
-    
-    <div class="menu-page">
+
+    <div id="menu-page" class="menu-page">
       <div class="menu-box">
         <h1>Game Instructions :</h1>
         <ul>
@@ -39,7 +40,7 @@
       </div>
     </div>
 
-    <div class="game-page hide">
+    <div id="game-page" class="game-page hide">
       <div id="game-container" class="game-container">
         <div class="dices-and-btns">
           <button id="new-game-btn" class="btn">NEW GAME</button>

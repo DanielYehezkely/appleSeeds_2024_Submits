@@ -1,0 +1,32 @@
+.hide {
+  display: none;
+}
+
+.btn {
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #dddadab2;
+  font-weight: 600;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #eeebebb2;
+  box-shadow: 1px 1px 10px 1px black;
+}
+
+.player-container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30rem;
+}
+
+.highlight {
+  font-weight: bold;
+}
