@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolling-Dice Game</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/variables.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    
+    <div class="menu-page">
+      <div class="menu-box">
+        <h1>Game Instructions :</h1>
+        <ul>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt,
+            temporibus?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt,
+            temporibus?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt,
+            temporibus?
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt,
+            temporibus?
+          </li>
+        </ul>
+        <h1>Please select a target score</h1>
+        <div class="starter-box">
+          <input id="target-score-input" type="number" />
+          <button id="start-game-btn" class="btn">Start Game</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-page hide">
+      <div id="game-container" class="game-container">
+        <div class="dices-and-btns">
+          <button id="new-game-btn" class="btn">NEW GAME</button>
+          <img class="dice" src="./assets/dice-1.png" alt="" />
+          <img class="dice" src="./assets/dice-2.png" alt="" />
+          <button id="roll-dice-btn" class="btn">ROLL DICE</button>
+          <button id="hole-btn" class="btn">HOLD</button>
+        </div>
+
+        <section id="player-1-container" class="player-container">
+          <div id="player-score-box" class="player-score-box">
+            <h1 id="player1-name" class="player-name">PLAYER 1</h1>
+            <div id="player1-score" class="player-score">0</div>
+          </div>
+          <div id="player1-current" class="player-current-box">
+            <div class="current-headline">CURRENT</div>
+            <div id="current-score" class="current-score">0</div>
+          </div>
+        </section>
+
+        <section id="player-2-container" class="player-container">
+          <div id="player-score-box" class="player-score-box">
+            <h1 id="player2-name" class="player-name">PLAYER 2</h1>
+            <div id="player2-score" class="player-score">0</div>
+          </div>
+          <div id="player2-current" class="player-current-box">
+            <div class="current-headline">CURRENT</div>
+            <div id="current-score" class="current-score">0</div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
