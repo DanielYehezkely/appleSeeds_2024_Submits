@@ -19,7 +19,6 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     gap: 10rem;
 }
 .starter-box{
@@ -40,27 +39,28 @@ img {
 }
 /* ------------------------------------------------------------- */
 .game-page {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#e66465, #9198e5);
 }
 #game-container {
     height: 100%;
-  width: 70%;
-  background-color: #5a05054b;
-  display: flex;
+    width: 70%;
+    background-color: #5a05054b;
+    display: flex;
 }
 .current-headline {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 .current-score {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 .player-score-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .player-current-box {
   width: 40%;
@@ -74,26 +74,29 @@ img {
   color: white;
 }
 .player-score {
-  font-size: 6rem;
-  color: rgba(55, 239, 252, 0.747);
+    font-size: 6rem;
+    color: rgba(55, 239, 252, 0.747);
 }
 .player-name {
-  font-size: 3rem;
-  font-weight: 400;
+    font-size: 3rem;
+    font-weight: 400;
 }
 .current-player {
-  background-color: #f0a0a093;
+    background-color: #f0a0a093;
 }
 .dices-and-btns {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100%;
-  width: 10%;
-  top: 0;
-  left: 45%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 10%;
+    top: 0;
+    left: 45%;
+}
+.hide {
+  display: none;
 }
 
 
