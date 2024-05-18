@@ -5,6 +5,7 @@ export default class AudioHandler {
     this.audio.src = './audio/Game-Main-Theme.mp3';
     this.audio.preload = 'auto';
     this.audio.volume = 0.2;
+    this.audio.loop = true;
     document.body.appendChild(this.audio);
 
     this.diceSound = document.createElement('audio');
