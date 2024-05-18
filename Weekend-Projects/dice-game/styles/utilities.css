@@ -1,4 +1,3 @@
-
 .btn {
   border: none;
   border-radius: 0.4rem;
@@ -24,4 +23,14 @@
   gap: 30rem;
 }
 
+.current-player {
+  background-color: #f0a0a093;
+  border: 1px solid black;
+}
 
+.invisible {
+  visibility: hidden;
+}
+.highlight {
+  font-weight: bold;
+}
