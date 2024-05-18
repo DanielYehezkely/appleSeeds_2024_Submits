@@ -2,7 +2,7 @@
   .menu-box {
     width: 90%; 
     height: 95%;
-    padding-top: 1rem; /* Adjust the padding */
+    padding-top: 1rem; 
   }
   .dice-headline{
     font-size: 4rem;
@@ -23,8 +23,5 @@
    width: 100%;
   }
 
-  .dices-and-btns{
-    
-  }
 
 }
