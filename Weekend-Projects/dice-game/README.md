@@ -34,7 +34,7 @@ This Dice Game is a web-based game built with modern JavaScript (ES6+). The game
 To get a local copy up and running, follow these steps:
 
 1. Clone the repository:
-   `git clone https://github.com/your-username/dice-game.git`
+   `git clone https://github.com/DanielYehezkely/appleSeeds_2024_Submits/tree/main/Weekend-Projects/dice-game`
 2. Navigate to the project directory:
    `cd dice-game`
 3. Open the project in your preferred code editor.
@@ -48,7 +48,7 @@ Open `index.html` in your web browser to start the game. The game interface will
 
 You can play the Dice Game live on Netlify. Click the link below to start playing:
 
-[Play Dice Game on Netlify]()
+[Play Dice Game on Netlify](https://dyz-dice-game.netlify.app/)
 ### Game Controls
 
 - **New Game**: Click the "New Game" button to restart the game.
@@ -60,7 +60,7 @@ You can play the Dice Game live on Netlify. Click the link below to start playin
 ![Game Start](./readmeMedia/game-start-pic.png)
 *Game Start Screen*
 
-![Rolling Dice]()
+![Rolling Dice](./readmeMedia/roll-dice-pic.png)
 *Player Rolling Dice*
 
 ![Winner Announcement](./readmeMedia/winner-pic.png)
