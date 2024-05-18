@@ -5,20 +5,25 @@ export default class DiceAndButtons {
     this.createButtons();
     this.createDices();
   }
-
   createButtons() {
-    this.newGameBtn = this.createButton('new-game-btn', 'NEW GAME');
-    this.rollDiceBtn = this.createButton('roll-dice-btn', 'ROLL DICE');
-    this.holdBtn = this.createButton('hold-btn', 'HOLD');
+    this.newGameBtn = this.createButton('new-game-btn', 'NEW GAME', 'fa-solid fa-rotate-right');
+    this.rollDiceBtn = this.createButton('roll-dice-btn', 'ROLL DICE', 'fa-solid fa-dice fa-beat');
+    this.holdBtn = this.createButton('hold-btn', 'HOLD', 'fa fa-hand-paper');
 
     this.element.append(this.newGameBtn, this.rollDiceBtn, this.holdBtn);
   }
 
-  createButton(id, text) {
+  createButton(id, text, iconClass) {
     const button = document.createElement('button');
     button.id = id;
     button.classList.add('btn');
-    button.textContent = text;
+
+    const icon = document.createElement('i');
+    icon.className = iconClass;
+
+    button.append(icon);
+    button.append(` ${text}`);
+
     return button;
   }
 
