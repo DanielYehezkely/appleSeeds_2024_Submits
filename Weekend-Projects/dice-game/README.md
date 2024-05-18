@@ -57,13 +57,13 @@ You can play the Dice Game live on Netlify. Click the link below to start playin
 
 ## Screenshots
 
-![Game Start](./readmeMedia/game-start-pic.png)
+![Game Start](./images/game-start-pic.png)
 *Game Start Screen*
 
-![Rolling Dice](./readmeMedia/roll-dice-pic.png)
+![Rolling Dice](./images/roll-dice-pic.png)
 *Player Rolling Dice*
 
-![Winner Announcement](./readmeMedia/winner-pic.png)
+![Winner Announcement](./images/winner-pic.png)
 *Winner Announcement*
 
 ## Conclusion
