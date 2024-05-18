@@ -23,3 +23,33 @@
    width: 100%;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .menu-box {
+    width: 90%; 
+    height: 95%;
+    padding-top: 1rem; 
+    gap: 8rem;
+  }
+  .menu-box ul li{
+    font-size: 2rem;
+  }
+  .dice-headline{
+    font-size: 8rem;
+  }
+  .dice-headline img{
+    width: 10%;
+  }
+  .starter-box {
+    width: 80%; 
+  }
+  .menu-box ul{
+    width: 70%;
+  }
+  #game-container{
+   width: 100%;
+  }
+  .btn {
+    width: 20%;
+    font-size: 2rem;
+  }
+}
