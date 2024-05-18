@@ -31,7 +31,4 @@ export default class AudioHandler {
   playWinnerSound() {
     this.winnerSound.play();
   }
-
-
-
 }

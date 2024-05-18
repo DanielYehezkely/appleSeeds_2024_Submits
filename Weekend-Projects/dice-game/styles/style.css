@@ -10,7 +10,6 @@ img {
   align-items: center;
   justify-content: center;
 }
-
 .dice-headline{
   width: 80%;
   height: 15%;
@@ -20,7 +19,6 @@ img {
 .dice-headline img {
   box-shadow: none;
 }
-
 .menu-box {
   width: 80%;
   height: 80%;
@@ -33,7 +31,6 @@ img {
   gap: 4rem;
   padding-top: 2rem;
 }
-
 .menu-box ul li {
   font-size: 1.4rem;
   font-weight: 500;
