@@ -1,5 +1,4 @@
 
-
 .btn {
   border: none;
   border-radius: 0.4rem;
@@ -11,7 +10,7 @@
 }
 
 .btn:hover {
-  background-color: #eeebebb2;
+  background-color: #fff6f6b2;
   box-shadow: 1px 1px 10px 1px black;
 }
 
@@ -25,7 +24,4 @@
   gap: 30rem;
 }
 
-.highlight {
-  font-weight: bold;
-}
 
