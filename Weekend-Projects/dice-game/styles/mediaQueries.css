@@ -1,0 +1,30 @@
+@media only screen and (max-width: 800px) {
+  .menu-box {
+    width: 90%; 
+    height: 95%;
+    padding-top: 1rem; /* Adjust the padding */
+  }
+  .dice-headline{
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dice-headline img{
+    width: 20%;
+  }
+  .starter-box {
+    width: 80%; 
+  }
+  .menu-box ul{
+    width: 70%;
+  }
+  #game-container{
+   width: 100%;
+  }
+
+  .dices-and-btns{
+    
+  }
+
+}
