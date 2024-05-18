@@ -6,23 +6,19 @@ export default class AudioHandler {
         this.audio.preload = 'auto';
         this.audio.volume = 0.2;
         document.body.appendChild(this.audio);
+
+        this.diceSound = document.createElement('audio');
+        this.diceSound.id = 'dice-sound';
+        this.diceSound.src = './audio/dice-142528.mp3';
+        this.diceSound.preload = 'auto';
+        document.body.appendChild(this.diceSound);
     }
 
     play() {
         this.audio.play();
     }
 
-    // pause() {
-    //     this.audio.pause();
-    // }
-
-    // stop() {
-    //     this.pause();
-    //     this.audio.currentTime = 0;
-    // }
-
-    // setVolume(volume) {
-    //     this.audio.volume = volume;
-    // }
-
+    playDiceSound() {
+        this.diceSound.play();
+    }
 }

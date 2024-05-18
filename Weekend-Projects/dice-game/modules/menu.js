@@ -1,5 +1,6 @@
 import { ErrorMessage } from "./errorMessage.js";
 import AudioHandler from "./audioHandle.js";
+import GameWorld from "./gameWorld.js";
 
 export default class Menu {
   constructor() {
@@ -9,10 +10,11 @@ export default class Menu {
     this.gamePage = document.getElementById('game-page');
     this.targetScore = 0;
     this.error = new ErrorMessage();
+    this.gameWorld = new GameWorld();
     this.audioHandler = new AudioHandler();
   }
 
-  startGame() {
+  startGameClick(callback) {
     this.startBtn.addEventListener('click', () => {
       const targetScoreValue = this.targetScoreInput.valueAsNumber;
 
@@ -23,8 +25,9 @@ export default class Menu {
         this.menuPage.style.display = 'none';
         this.gamePage.classList.remove('hide');
         console.log('Target Score:', this.targetScore);
-
+        this.gameWorld.buildGameWorld();
         this.audioHandler.play();
+        if (callback) callback();
       }
     });
   }

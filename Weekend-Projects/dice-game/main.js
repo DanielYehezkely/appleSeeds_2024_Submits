@@ -1,8 +1,6 @@
-import Menu from "./modules/menu.js";
 import Game from "./modules/game.js";
 
-const menu = new Menu();
-menu.startGame();
+document.addEventListener('DOMContentLoaded', () => {
+    const game = new Game();
+});
 
-const game = new Game();
-game.restartGame();
