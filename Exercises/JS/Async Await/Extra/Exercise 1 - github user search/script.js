@@ -66,7 +66,6 @@ searchButton.addEventListener('click', () => {
 
 });
 
-
 const displayErrorMessage = (message) => {
 	userDetailContainer.innerHTML = '';
 	const error = document.createElement('div');
