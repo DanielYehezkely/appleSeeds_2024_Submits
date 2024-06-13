@@ -1,0 +1,14 @@
+.CountriesList{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  height: 70%;
+  width: 40%;
+  overflow: scroll;
+}
+
+.country {
+  font-size: 1.6rem;
+}

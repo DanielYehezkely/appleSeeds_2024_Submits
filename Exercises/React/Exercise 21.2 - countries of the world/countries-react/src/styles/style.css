@@ -1,0 +1,21 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+ .hero-container h1 {
+  font-size: 3rem;
+}
+
+.error {
+  font-size: 4rem;
+  color: red;
+}
+
+.loader {
+  font-size: 4rem;
+}
