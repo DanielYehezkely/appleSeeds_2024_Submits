@@ -1,0 +1,16 @@
+.BoxComponent {
+  background-color: red;
+  box-shadow: 1px 1px 5px 1px black;
+  position: relative;
+  animation: slideIn 1s forwards;
+  margin-bottom: 1rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(10%);
+  }
+}

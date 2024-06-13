@@ -1,0 +1,13 @@
+.hero-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+
+ .hero-container h1 {
+  font-size: 3rem;
+}
