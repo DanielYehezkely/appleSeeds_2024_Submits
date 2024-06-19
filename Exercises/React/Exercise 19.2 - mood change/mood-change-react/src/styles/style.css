@@ -1,0 +1,23 @@
+.hero-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: #e4e2e2;
+}
+
+
+ .hero-container h1 {
+  font-size: 3rem;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.page {
+  font-size: 4rem;
+}
