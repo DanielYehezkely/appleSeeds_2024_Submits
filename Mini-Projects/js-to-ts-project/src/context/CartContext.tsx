@@ -17,7 +17,7 @@ interface ContextProviderProps {
   children: ReactNode;
 }
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
+const CartContext = createContext<CartContextType | undefined >(undefined);
 
 export const CartProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
