@@ -1,0 +1,34 @@
+.PanelPage {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 1rem;
+}
+
+.panel-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.panel-edit-button {
+  background-color: #6722e6;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 6px 0px #3800d3;
+  width: auto;
+}
+
+.panel-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+

@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { ShoeGenericForm, ErrorMessage, Loader } from "../../components";
+import { useFetchShoes } from "../../context/FetchShoesContext";
 
 import './EditPage.css';
-import { useFetchShoes } from "../../context/FetchShoesContext";
 
 const EditPage = () => {
 
@@ -24,7 +24,7 @@ const EditPage = () => {
       {isSingleShoeLoading ? (
         <Loader />
       ) : singleShoeError ? (
-        <ErrorMessage message={error} />
+        <ErrorMessage error={Error}/>
       ) : (
         <ShoeGenericForm shoe={singleShoe} />
       )}

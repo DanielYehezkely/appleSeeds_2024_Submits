@@ -4,14 +4,16 @@ import { ShoeGenericForm } from "../../components";
 
 import './AddShoePage.css'
 
-const AddShoePage = () => {
+const AddShoePage:React.FC = () => {
   return (
     <>
       <div className="AddShoePage">
-        <ShoeGenericForm/>
+        <ShoeGenericForm />
       </div>
     </>
   );
 };
 
 export default AddShoePage;
+
+

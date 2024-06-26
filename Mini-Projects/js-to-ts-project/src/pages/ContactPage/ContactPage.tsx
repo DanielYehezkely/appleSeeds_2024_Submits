@@ -1,11 +1,10 @@
 import React from "react";
 
-import Contact from "../../components/Contact/Contact";
+import { Contact } from "../../components";
 
 import './ContactPage.css'
 
-
-const ContactPage = () => {
+const ContactPage:React.FC = () => {
   return (
     <>
     <div className="ContactPage">

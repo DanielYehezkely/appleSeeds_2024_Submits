@@ -9,6 +9,7 @@ export interface Shoe {
   name: string;
   image: string;
   price: number;
+  info: string;
   [key: string]: any;
 }
 
