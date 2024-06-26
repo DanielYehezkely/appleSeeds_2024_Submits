@@ -1,12 +1,14 @@
 import React from "react";
 
-import { Loader, ShoeCard, ErrorMessage } from "../../components";
+import { Loader,  ErrorMessage, ShoeCard } from "../../components";
 
 import { useFetchShoes } from "../../context/FetchShoesContext";
 
+
 import './ShoesPage.css';
 
-const ShoesPage = () => {
+
+const ShoesPage: React.FC = () => {
 
   const { error, isLoading, shoes } = useFetchShoes();
 

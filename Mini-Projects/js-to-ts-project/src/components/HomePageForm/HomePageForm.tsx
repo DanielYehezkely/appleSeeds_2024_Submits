@@ -4,11 +4,17 @@ import ICONS from '../../models/icons';
 
 import './HomePageForm.css';
 
-const HomePageForm = ({ handleLogin, error }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+interface Props {
+handleLogin: (username: string, password: string)=> void ;
+error: boolean;
+}
 
-  const onSubmit = (e) => {
+const HomePageForm: React.FC<Props> = ({ handleLogin, error }) => {
+  
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>('');
+
+  const onSubmit = (e:React.FormEvent) => {
     e.preventDefault();
     handleLogin(username, password);
   };

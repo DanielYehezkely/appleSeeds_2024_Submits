@@ -3,6 +3,9 @@ export const ADMIN = {
   password: import.meta.env.VITE_ADMIN_PASSWORD  
 };
 
+export const BASE_URL = import.meta.env.VITE_BASE_URL;
+export const USERS_URL = import.meta.env.VITE_USERS_URL; 
+
 // Links
 export const GITHUB_LINK: string = 'https://github.com/DanielYehezkely';
 export const LINKEDIN_LINK: string = 'https://www.linkedin.com/in/daniel-yehezkely/';

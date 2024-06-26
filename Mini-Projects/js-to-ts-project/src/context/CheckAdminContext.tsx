@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useState,
-  useContext,
-  useEffect,
-} from "react";
-
+import React, { createContext, useState, useContext, useEffect } from "react";
 import { ContextProviderProps } from "@/models/models";
 
 interface AdminContextType {
@@ -13,19 +7,17 @@ interface AdminContextType {
   logout: () => void;
 }
 
-
 const AdminContext = createContext<AdminContextType | undefined>(undefined);
-
 
 export const AdminProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
 
-  const loginAsAdmin = () => {
+  const loginAsAdmin: () => void = () => {
     setIsAdmin(true);
     localStorage.setItem("isAdmin", "true");
   };
 
-  const logout = () => {
+  const logout: () => void = () => {
     setIsAdmin(false);
     localStorage.removeItem("isAdmin");
   };

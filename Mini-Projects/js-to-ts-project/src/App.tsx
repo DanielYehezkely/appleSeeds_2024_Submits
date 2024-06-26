@@ -6,7 +6,7 @@ import { CartProvider } from "./context/CartContext";
 
 import {
   HomePage,
-  // ShoesPage,
+  ShoesPage,
   // AddShoePage,
   NotFoundPage,
   // ShoePage,
@@ -15,8 +15,7 @@ import {
   // CartPage,
 } from "./pages";
 
-
-// import { FetchShoesProvider } from "./context/FetchShoesContext";
+import { FetchShoesProvider } from "./context/FetchShoesContext";
 // import { FetchUsersProvider } from "./context/FetchUsersContext";
 
 const App: React.FC = () => {
@@ -29,10 +28,10 @@ const App: React.FC = () => {
       path: "shoes",
       element: <Layout />,
       children: [
-        // {
-        //   index: true,
-        //   element: <ShoesPage />,
-        // },
+        {
+          index: true,
+          element: <ShoesPage />,
+        },
         // {
         //   path: ":shoeId",
         //   element: <ShoePage />,
@@ -67,15 +66,17 @@ const App: React.FC = () => {
 
   return (
     <AdminProvider>
-      {/* <FetchShoesProvider>
+      {/* 
         <FetchUsersProvider>
           */}
-      <CartProvider>
-        <RouterProvider router={router} />
-      </CartProvider>
+      <FetchShoesProvider>
+        <CartProvider>
+          <RouterProvider router={router} />
+        </CartProvider>
+      </FetchShoesProvider>
       {/* 
         </FetchUsersProvider>
-      </FetchShoesProvider> */}
+       */}
     </AdminProvider>
   );
 };

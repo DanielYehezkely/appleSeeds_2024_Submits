@@ -3,8 +3,8 @@
 // import AddToCartButton from "./SingleShoeCard/AddToCartButton/AddToCartButton";
 // import DeleteButton from "./SingleShoeCard/DeleteButton/DeleteButton";
 // import ShoeGenericForm from "./ShoeGenericForm/ShoeGenericForm";
-// import ShoeCard from "./ShoeCard/ShoeCard";
-// import Loader from "./Loader/Loader";
+import ShoeCard from "./ShoeCard/ShoeCard";
+import Loader from "./Loader/Loader";
 import Layout from './Layout/Layout'
 // import Footer from "./Layout/Footer/Footer";
 // import NavBar from "./Layout/NavBar/NavBar";
@@ -17,17 +17,18 @@ import ErrorMessage from "./ErrorMessage/ErrorMessage";
 // import CartComponent from "./CartComponent/CartComponent";
 
 
-export { 
-  // DeleteButton, 
-  // EditButton, 
+export {
+  // DeleteButton,
+  // EditButton,
   // AddToCartButton,
-   ErrorMessage, 
+  ErrorMessage,
   //  Footer,
-    HomePageForm, 
-    Layout,
-    //  Loader,
-    //  NavBar, ShoeCard, 
-    //  ShoeGenericForm, SingleShoeCard,
-    //   ShoesTable, ContactForm, UsersTable, 
-    //   PanelButton, CartComponent
- }
+  HomePageForm,
+  Layout,
+  Loader,
+  ShoeCard,
+  //  NavBar, ,
+  //  ShoeGenericForm, SingleShoeCard,
+  //   ShoesTable, ContactForm, UsersTable,
+  //   PanelButton, CartComponent
+};

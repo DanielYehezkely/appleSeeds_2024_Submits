@@ -1,5 +1,5 @@
 import HomePage from './HomePage/HomePage';
-// import ShoesPage from './ShoesPage/ShoesPage';
+import ShoesPage from './ShoesPage/ShoesPage';
 // import AddShoePage from './AddShoePage/AddShoePage';
 import NotFoundPage from './NotFoundPage/NotFoundPage';
 // import ShoePage from './ShoePage/ShoePage';
@@ -8,5 +8,5 @@ import NotFoundPage from './NotFoundPage/NotFoundPage';
 // import CartPage from './CartPage/CartPage';
 // import PanelPage from './PanelPage/PanelPage';
 
-export { HomePage, NotFoundPage };
-  // , ShoesPage, AddShoePage, , ShoePage, EditPage, ContactPage, CartPage , PanelPage};
+export { HomePage, NotFoundPage, ShoesPage };
+  // , , AddShoePage, , ShoePage, EditPage, ContactPage, CartPage , PanelPage};
